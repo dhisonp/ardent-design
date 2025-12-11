@@ -167,7 +167,7 @@ Used for display type, headings (H1–H4), and UI elements requiring strong pres
 
 **Stack:** Charter → Domine → Palatino → Georgia → serif
 
-Used for body copy, paragraphs, and extended reading. Serif body text provides a timeless, editorial quality—like reading a Bell Labs technical paper or a Whole Earth Catalog article. Relaxed line-height (1.625) for comfortable reading.
+Used for body copy, paragraphs, and extended reading. Serif body text provides a timeless, editorial quality—like reading a Bell Labs technical paper or a Whole Earth Catalog article. Tight line-height (1.4) for dense, compact reading.
 
 ### Monospace: Labels, Code, Metadata
 
@@ -184,8 +184,8 @@ Used for labels, captions, metadata, timestamps, code, and system information. W
 | Heading 2   | Sans      | 2xl    | Semibold | 1.3         | Normal         |
 | Heading 3   | Sans      | xl     | Semibold | 1.3         | Normal         |
 | Heading 4   | Sans      | lg     | Medium   | 1.45        | Normal         |
-| Body        | Serif     | base   | Regular  | 1.55        | Normal         |
-| Body Small  | Serif     | sm     | Regular  | 1.55        | Normal         |
+| Body        | Serif     | base   | Regular  | 1.4         | Normal         |
+| Body Small  | Serif     | sm     | Regular  | 1.4         | Normal         |
 | Label       | Mono      | xs     | Medium   | 1.45        | Wider          |
 | Code        | Mono      | sm     | Regular  | 1.45        | Normal         |
 | Caption     | Mono      | xs     | Regular  | 1.45        | Wide           |
@@ -241,7 +241,7 @@ Light mode semantic mappings:
 | text.info              | ocean.600       | Informational text           |
 | text.link              | ocean.600       | Link text                    |
 | text.error             | red.600         | Error text                   |
-| border.default         | gray.200        | Standard borders             |
+| border.default         | gray.900        | Standard borders             |
 | border.strong          | gray.900        | Emphasized borders           |
 
 Dark mode inverts appropriately—see `tokens.json` for full mappings.
@@ -260,12 +260,12 @@ Tight, consistent rhythm creates density without chaos. Ardent uses a 4px base u
 0.25rem (4px)   → space.1
 0.5rem  (8px)   → space.2
 0.75rem (12px)  → space.3
-1rem    (16px)  → space.4
-1.25rem (20px)  → space.5
-1.5rem  (24px)  → space.6
-2rem    (32px)  → space.8
-3rem    (48px)  → space.12
-4rem    (64px)  → space.16
+0.875rem (14px) → space.4
+1rem    (16px)  → space.5
+1.25rem (20px)  → space.6
+1.75rem (28px)  → space.8
+2.5rem  (40px)  → space.12
+3.5rem  (56px)  → space.16
 ```
 
 ### Semantic Spacing
@@ -301,7 +301,7 @@ Flat surfaces. No shadows. Borders are structural—they delineate, they don't d
 
 - **Cards:** Hairline border, no radius, no shadow
 - **Buttons:** Hairline border, no radius
-- **Inputs:** Hairline border, minimal radius (2px) for usability
+- **Inputs:** Hairline border, no radius
 - **Dividers:** Hairline, full-width rules
 
 ---
@@ -331,7 +331,7 @@ Use arrow indicators for external links (↗) and navigation (→).
 
 ### Dividers
 
-Hairline rules. Can be muted (gray.200) or strong (gray.900) depending on emphasis needed.
+Hairline rules. Default dividers use gray.900 (harsh, high-contrast). Can be made thicker with the strong variant (gray.900, 2px).
 
 ---
 
