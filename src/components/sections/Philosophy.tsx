@@ -3,7 +3,7 @@ import { Divider } from "@/components/ui/Divider";
 
 const tenets = [
   {
-    title: "Intentionality over style",
+    title: "Intentionality Over Style",
     description: "Every design decision requires a reason.",
   },
   {
@@ -15,24 +15,24 @@ const tenets = [
     description: "Ignore trends. Design for permanence.",
   },
   {
-    title: "Density",
-    description: "Screen real estate is valuable. Use it.",
+    title: "Precision",
+    description: "Engineered, not decorated.",
   },
   {
-    title: "Explicit State",
-    description: "Never hide what is happening.",
+    title: "Functional Density",
+    description: "As complex as it needs to be. No more, no less.",
   },
   {
-    title: "Semantic Color",
-    description: "Color has meaning, not decoration.",
+    title: "Warmth Through Craft",
+    description: "The human is visible in the details.",
   },
   {
-    title: "Type as Structure",
-    description: "Typography creates hierarchy, not whitespace.",
+    title: "Performance Is Design",
+    description: "Fast, lightweight, no bloat.",
   },
   {
-    title: "Rigorous alignment",
-    description: "Everything aligns to the grid.",
+    title: "Respect for Users",
+    description: "Don't infantilize.",
   },
 ];
 

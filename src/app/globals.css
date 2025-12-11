@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    @apply bg-gray-200 text-gray-900 font-serif antialiased;
+    @apply bg-gray-50 text-gray-900 font-serif antialiased;
   }
   
   .dark body {

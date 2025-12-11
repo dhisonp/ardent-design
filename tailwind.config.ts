@@ -28,19 +28,11 @@ const config: Config = {
           500: "#DC2626",
           600: "#B91C1C",
         },
-        // User requested additions
-        amber: {
-          400: "#FBBF24",
-          500: "#F59E0B",
-        },
-        indigo: {
-          500: "#6366F1",
-        },
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "Helvetica Neue", "Arial", "sans-serif"],
-        serif: ["var(--font-serif)", "Georgia", "serif"],
-        mono: ["var(--font-mono)", "Consolas", "monospace"],
+        sans: ["var(--font-sans)", "Inter", "Helvetica Neue", "Arial", "sans-serif"],
+        serif: ["var(--font-serif)", "Domine", "Georgia", "serif"],
+        mono: ["var(--font-mono)", "IBM Plex Mono", "Consolas", "monospace"],
       },
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1.5" }],
