@@ -9,7 +9,7 @@ export function Label({ children, className }: LabelProps) {
   return (
     <span
       className={cn(
-        "font-mono text-xs uppercase tracking-wider text-gray-500",
+        "font-mono text-xs uppercase tracking-wider text-gray-600",
         className
       )}
     >

@@ -14,7 +14,7 @@ export function Header() {
         </p>
         
         <div className="pt-4">
-          <span className="font-mono text-xs text-gray-400">v0.1.0</span>
+          <span className="font-mono text-xs text-gray-600">v0.1.0</span>
         </div>
       </div>
       

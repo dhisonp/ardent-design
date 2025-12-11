@@ -24,9 +24,9 @@ export function Components() {
             <Button variant="ghost">Ghost</Button>
           </div>
           <div className="flex gap-12 pt-2">
-             <div className="text-xs font-mono text-gray-500 w-[84px] text-center">↑ solid<br/>dark bg</div>
-             <div className="text-xs font-mono text-gray-500 w-[100px] text-center">↑ outlined<br/>hairline</div>
-             <div className="text-xs font-mono text-gray-500 w-[60px] text-center">↑ text only<br/>no border</div>
+             <div className="text-xs font-mono text-gray-600 w-[84px] text-center">↑ solid<br/>dark bg</div>
+             <div className="text-xs font-mono text-gray-600 w-[100px] text-center">↑ outlined<br/>hairline</div>
+             <div className="text-xs font-mono text-gray-600 w-[60px] text-center">↑ text only<br/>no border</div>
           </div>
         </div>
 
@@ -42,7 +42,7 @@ export function Components() {
                  Card content in serif. This is body text demonstrating how a card contains information.
                </p>
                <div className="pt-2">
-                 <span className="font-mono text-xs text-gray-500">metadata · 2024-01-15</span>
+                 <span className="font-mono text-xs text-gray-600">metadata · 2024-01-15</span>
                </div>
              </div>
           </Card>
@@ -61,7 +61,7 @@ export function Components() {
               External link ↗
             </a>
           </div>
-          <div className="text-xs font-mono text-gray-500 pt-1">↑ underline, hover = emerald</div>
+          <div className="text-xs font-mono text-gray-600 pt-1">↑ underline, hover = emerald</div>
         </div>
 
         <Divider />
@@ -72,11 +72,11 @@ export function Components() {
            <div className="space-y-4">
              <div className="space-y-1">
                <Divider variant="default" />
-               <div className="text-xs font-mono text-gray-500 text-right">Default (gray-200)</div>
+               <div className="text-xs font-mono text-gray-600 text-right">Default (gray-200)</div>
              </div>
              <div className="space-y-1">
                <Divider variant="strong" />
-               <div className="text-xs font-mono text-gray-500 text-right">Strong (gray-900)</div>
+               <div className="text-xs font-mono text-gray-600 text-right">Strong (gray-900)</div>
              </div>
            </div>
         </div>
@@ -89,7 +89,7 @@ export function Components() {
            <div className="max-w-md">
              <Input placeholder="Placeholder text" />
            </div>
-           <div className="text-xs font-mono text-gray-500 pt-1">↑ hairline border, 2px radius ONLY for inputs</div>
+           <div className="text-xs font-mono text-gray-600 pt-1">↑ hairline border, no radius</div>
         </div>
 
       </div>

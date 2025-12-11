@@ -17,7 +17,7 @@ export function Influences() {
             <h3 className="text-base font-sans font-bold text-gray-900 dark:text-gray-50">
               U.S. Graphics Co.
             </h3>
-            <span className="font-mono text-xs text-gray-500">50%</span>
+            <span className="font-mono text-xs text-gray-600">50%</span>
             <p className="text-sm font-serif text-gray-900 dark:text-gray-50">
               Control panels, technical docs, dense and explicit.
             </p>
@@ -30,7 +30,7 @@ export function Influences() {
             <h3 className="text-base font-sans font-bold text-gray-900 dark:text-gray-50">
               IBM Carbon
             </h3>
-            <span className="font-mono text-xs text-gray-500">30%</span>
+            <span className="font-mono text-xs text-gray-600">30%</span>
             <p className="text-sm font-serif text-gray-900 dark:text-gray-50">
               Systematic rigor, modular components, accessibility.
             </p>
@@ -43,7 +43,7 @@ export function Influences() {
             <h3 className="text-base font-sans font-bold text-gray-900 dark:text-gray-50">
               Recursive
             </h3>
-            <span className="font-mono text-xs text-gray-500">20%</span>
+            <span className="font-mono text-xs text-gray-600">20%</span>
             <p className="text-sm font-serif text-gray-900 dark:text-gray-50">
               Warmth within structure. Humanity in monospace.
             </p>

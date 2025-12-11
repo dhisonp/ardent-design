@@ -13,7 +13,7 @@ export function Footer() {
           <Link href="#" className="text-sm font-sans hover:underline text-gray-900 dark:text-gray-50">
             Repository ↗
           </Link>
-          <span className="font-mono text-xs text-gray-500">2024</span>
+          <span className="font-mono text-xs text-gray-600">2024</span>
         </div>
       </div>
     </footer>

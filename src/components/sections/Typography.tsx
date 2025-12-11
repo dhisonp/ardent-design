@@ -12,25 +12,25 @@ export function Typography() {
       <div className="space-y-8">
         {/* Headings */}
         <div className="space-y-6">
-          <div className="flex items-baseline justify-between border-b border-gray-100 dark:border-gray-800 pb-2">
+          <div className="flex items-baseline justify-between border-b border-gray-200 dark:border-gray-800 pb-2">
             <span className="text-4xl font-sans font-bold text-gray-900 dark:text-gray-50">Display</span>
-            <span className="font-mono text-xs text-gray-400">4xl Sans Bold</span>
+            <span className="font-mono text-xs text-gray-600">4xl Sans Bold</span>
           </div>
-          <div className="flex items-baseline justify-between border-b border-gray-100 dark:border-gray-800 pb-2">
+          <div className="flex items-baseline justify-between border-b border-gray-200 dark:border-gray-800 pb-2">
             <span className="text-3xl font-sans font-bold text-gray-900 dark:text-gray-50">Heading 1</span>
-            <span className="font-mono text-xs text-gray-400">3xl Sans Bold</span>
+            <span className="font-mono text-xs text-gray-600">3xl Sans Bold</span>
           </div>
-          <div className="flex items-baseline justify-between border-b border-gray-100 dark:border-gray-800 pb-2">
+          <div className="flex items-baseline justify-between border-b border-gray-200 dark:border-gray-800 pb-2">
             <span className="text-2xl font-sans font-bold text-gray-900 dark:text-gray-50">Heading 2</span>
-            <span className="font-mono text-xs text-gray-400">2xl Sans Bold</span>
+            <span className="font-mono text-xs text-gray-600">2xl Sans Bold</span>
           </div>
-          <div className="flex items-baseline justify-between border-b border-gray-100 dark:border-gray-800 pb-2">
+          <div className="flex items-baseline justify-between border-b border-gray-200 dark:border-gray-800 pb-2">
             <span className="text-xl font-sans font-bold text-gray-900 dark:text-gray-50">Heading 3</span>
-            <span className="font-mono text-xs text-gray-400">xl Sans Bold</span>
+            <span className="font-mono text-xs text-gray-600">xl Sans Bold</span>
           </div>
-          <div className="flex items-baseline justify-between border-b border-gray-100 dark:border-gray-800 pb-2">
+          <div className="flex items-baseline justify-between border-b border-gray-200 dark:border-gray-800 pb-2">
             <span className="text-lg font-sans font-bold text-gray-900 dark:text-gray-50">Heading 4</span>
-            <span className="font-mono text-xs text-gray-400">lg Sans Bold</span>
+            <span className="font-mono text-xs text-gray-600">lg Sans Bold</span>
           </div>
         </div>
 
@@ -44,7 +44,7 @@ export function Typography() {
             </p>
           </div>
           <div className="flex items-end justify-end">
-             <span className="font-mono text-xs text-gray-400">Base Serif Regular</span>
+             <span className="font-mono text-xs text-gray-600">Base Serif Regular</span>
           </div>
         </div>
 
@@ -54,19 +54,19 @@ export function Typography() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="space-y-2">
              <Label>LABEL</Label>
-             <div className="font-mono text-xs text-gray-400">mono xs uppercase</div>
+             <div className="font-mono text-xs text-gray-600">mono xs uppercase</div>
           </div>
           <div className="space-y-2">
              <code className="font-mono text-sm text-gray-900 dark:text-gray-50">CODE</code>
-             <div className="font-mono text-xs text-gray-400">mono sm regular</div>
+             <div className="font-mono text-xs text-gray-600">mono sm regular</div>
           </div>
           <div className="space-y-2">
              <span className="font-mono text-xs text-gray-900 dark:text-gray-50">Caption</span>
-             <div className="font-mono text-xs text-gray-400">mono xs regular</div>
+             <div className="font-mono text-xs text-gray-600">mono xs regular</div>
           </div>
           <div className="space-y-2">
-             <span className="font-mono text-xs text-gray-400">metadata</span>
-             <div className="font-mono text-xs text-gray-400">mono xs tight</div>
+             <span className="font-mono text-xs text-gray-600">metadata</span>
+             <div className="font-mono text-xs text-gray-600">mono xs tight</div>
           </div>
         </div>
       </div>

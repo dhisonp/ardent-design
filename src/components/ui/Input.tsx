@@ -15,7 +15,7 @@ export function Input({ className, ...props }: InputProps) {
         "text-sm font-mono text-gray-900 dark:text-gray-50",
         "placeholder:text-gray-400",
         "px-3 py-2",
-        "rounded-sm", // 2px radius
+        "rounded-none", // no radius
         "w-full",
         className
       )}
