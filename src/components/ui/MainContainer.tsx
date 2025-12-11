@@ -7,10 +7,10 @@ interface MainContainerProps {
 
 export function MainContainer({ children, className }: MainContainerProps) {
   return (
-    <div 
+    <div
       className={cn(
-        "max-w-page mx-auto min-h-screen bg-gray-50 border-x border-gray-900 shadow-none",
-        className
+        "max-w-page mx-auto min-h-screen bg-white border-x border-gray-900 shadow-none",
+        className,
       )}
     >
       {children}

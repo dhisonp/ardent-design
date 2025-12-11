@@ -9,17 +9,13 @@ export function Header() {
         <h1 className="text-4xl font-sans font-bold tracking-tight text-gray-900">
           Ardent Design
         </h1>
+
+        <Divider variant="strong" />
+
         <p className="text-base font-serif text-gray-900 max-w-lg">
           A design system for precision, intention, and timelessness.
         </p>
-        
-        <div className="pt-4">
-          <span className="font-mono text-xs text-gray-600">v0.1.0</span>
-        </div>
-      </div>
-      
-      <div className="pt-6">
-        <Divider />
+        <span className="font-mono text-xs text-gray-600">v0.1.0</span>
       </div>
     </section>
   );

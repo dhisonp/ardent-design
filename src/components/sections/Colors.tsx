@@ -21,7 +21,7 @@ export function Colors() {
     { name: "White", className: "bg-white", hex: "#FFFFFF" },
     { name: "Black", className: "bg-black", hex: "#000000" },
   ];
-  
+
   const emeralds = [
     { shade: 50, className: "bg-emerald-50" },
     { shade: 100, className: "bg-emerald-100" },
@@ -34,7 +34,7 @@ export function Colors() {
     { shade: 800, className: "bg-emerald-800" },
     { shade: 900, className: "bg-emerald-900" },
   ];
-  
+
   const reds = [
     { shade: 50, className: "bg-red-50" },
     { shade: 100, className: "bg-red-100" },
@@ -84,7 +84,7 @@ export function Colors() {
         <Label>COLORS</Label>
       </div>
       <Divider className="mb-4" />
-      
+
       <div className="space-y-6">
         {/* Primitives */}
         <div className="space-y-4">
@@ -120,7 +120,7 @@ export function Colors() {
 
         {/* Accents */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
+
           {/* Emeralds */}
           <div className="space-y-4">
              <h3 className="text-sm font-sans font-bold text-gray-900">Emerald</h3>
@@ -187,10 +187,6 @@ export function Colors() {
           </div>
 
         </div>
-      </div>
-      
-      <div className="pt-6">
-        <Divider />
       </div>
     </section>
   );

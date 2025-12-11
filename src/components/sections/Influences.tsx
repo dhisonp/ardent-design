@@ -9,7 +9,7 @@ export function Influences() {
         <Label>INFLUENCES</Label>
       </div>
       <Divider className="mb-4" />
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3">
         {/* Card 1 */}
         <Card className="border-b-0 md:border-b md:border-r-0 border-gray-900">
@@ -49,10 +49,6 @@ export function Influences() {
             </p>
           </div>
         </Card>
-      </div>
-      
-      <div className="pt-6">
-        <Divider />
       </div>
     </section>
   );

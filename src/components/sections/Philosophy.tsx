@@ -43,10 +43,10 @@ export function Philosophy() {
         <Label>PHILOSOPHY</Label>
       </div>
       <Divider className="mb-4" />
-      
-      <div className="grid gap-4">
+
+      <div className="grid gap-2">
         {tenets.map((tenet, index) => (
-          <div key={index} className="space-y-3">
+          <div key={index} className="space-y-1">
             <h3 className="font-sans font-bold text-gray-900">
               {tenet.title}
             </h3>
@@ -55,10 +55,6 @@ export function Philosophy() {
             </p>
           </div>
         ))}
-      </div>
-      
-      <div className="pt-6">
-        <Divider />
       </div>
     </section>
   );
