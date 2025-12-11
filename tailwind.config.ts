@@ -8,7 +8,7 @@ const config: Config = {
         gray: {
           50: "#FAFAFA",
           100: "#F5F5F5",
-          200: "#B0B0B0", // Darkened for punchier borders (USG style)
+          200: "#E5E5E5",
           300: "#D4D4D4",
           400: "#A3A3A3",
           500: "#737373",
@@ -72,7 +72,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", "Inter", "Helvetica Neue", "Arial", "sans-serif"],
-        serif: ["Times New Roman", "Times", "serif"],
+        serif: ["var(--font-serif)", "Old Standard TT", "serif"],
         mono: ["var(--font-mono)", "IBM Plex Mono", "Consolas", "monospace"],
       },
       fontSize: {

@@ -12,29 +12,27 @@ export function Typography() {
       <div className="space-y-6">
         {/* Headings */}
         <div className="space-y-4">
-          <div className="flex items-baseline justify-between border-b border-gray-200 pb-2">
+          <div className="flex items-baseline justify-between border-b border-gray-900 pb-2">
             <span className="text-4xl font-sans font-bold text-gray-900">Display</span>
             <span className="font-mono text-xs text-gray-600">4xl Sans Bold</span>
           </div>
-          <div className="flex items-baseline justify-between border-b border-gray-200 pb-2">
+          <div className="flex items-baseline justify-between border-b border-gray-900 pb-2">
             <span className="text-3xl font-sans font-bold text-gray-900">Heading 1</span>
             <span className="font-mono text-xs text-gray-600">3xl Sans Bold</span>
           </div>
-          <div className="flex items-baseline justify-between border-b border-gray-200 pb-2">
+          <div className="flex items-baseline justify-between border-b border-gray-900 pb-2">
             <span className="text-2xl font-sans font-bold text-gray-900">Heading 2</span>
             <span className="font-mono text-xs text-gray-600">2xl Sans Bold</span>
           </div>
-          <div className="flex items-baseline justify-between border-b border-gray-200 pb-2">
+          <div className="flex items-baseline justify-between border-b border-gray-900 pb-2">
             <span className="text-xl font-sans font-bold text-gray-900">Heading 3</span>
             <span className="font-mono text-xs text-gray-600">xl Sans Bold</span>
           </div>
-          <div className="flex items-baseline justify-between border-b border-gray-200 pb-2">
+          <div className="flex items-baseline justify-between border-b border-gray-900 pb-2">
             <span className="text-lg font-sans font-bold text-gray-900">Heading 4</span>
             <span className="font-mono text-xs text-gray-600">lg Sans Bold</span>
           </div>
         </div>
-
-        <Divider />
 
         {/* Body */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

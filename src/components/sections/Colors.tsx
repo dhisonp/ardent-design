@@ -93,7 +93,7 @@ export function Colors() {
              {primitives.map(({ name, className, hex }) => (
                <div key={name} className="flex flex-col space-y-2">
                   <div className={cn(
-                    "w-10 h-10 border border-hairline border-gray-200",
+                    "w-10 h-10 border border-hairline border-gray-900",
                     className
                   )} />
                   <span className="font-mono text-xs text-gray-600">{name}</span>
@@ -109,7 +109,7 @@ export function Colors() {
              {grays.map(({ shade, className }) => (
                <div key={shade} className="flex flex-col space-y-2 mr-2 mb-2">
                   <div className={cn(
-                    "w-10 h-10 border border-hairline border-gray-200",
+                    "w-10 h-10 border border-hairline border-gray-900",
                     className
                   )} />
                   <span className="font-mono text-xs text-gray-600">{shade}</span>

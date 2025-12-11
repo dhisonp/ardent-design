@@ -12,7 +12,7 @@ export function Influences() {
       
       <div className="grid grid-cols-1 md:grid-cols-3">
         {/* Card 1 */}
-        <Card className="border-b-0 md:border-b md:border-r-0 border-gray-200">
+        <Card className="border-b-0 md:border-b md:border-r-0 border-gray-900">
           <div className="space-y-4">
             <h3 className="text-base font-sans font-bold text-gray-900">
               U.S. Graphics Co.
@@ -25,7 +25,7 @@ export function Influences() {
         </Card>
 
         {/* Card 2 */}
-        <Card className="border-b-0 md:border-b md:border-r-0 border-gray-200">
+        <Card className="border-b-0 md:border-b md:border-r-0 border-gray-900">
           <div className="space-y-4">
             <h3 className="text-base font-sans font-bold text-gray-900">
               IBM Carbon
@@ -38,7 +38,7 @@ export function Influences() {
         </Card>
 
         {/* Card 3 */}
-        <Card className="border-gray-200">
+        <Card className="border-gray-900">
           <div className="space-y-4">
             <h3 className="text-base font-sans font-bold text-gray-900">
               Recursive

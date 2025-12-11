@@ -325,7 +325,7 @@ All buttons: no border-radius.
 ### Links
 
 Default state: ocean blue (`text.link`), underlined.
-Hover state: emerald accent, underlined.
+Hover state: neutral (gray.600), underlined.
 
 Use arrow indicators for external links (↗) and navigation (→).
 

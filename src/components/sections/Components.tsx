@@ -54,14 +54,14 @@ export function Components() {
         <div className="space-y-4">
           <h3 className="text-sm font-sans font-bold text-gray-900">Links</h3>
           <div className="flex gap-8">
-            <Link href="#" className="underline hover:text-emerald-600 font-serif text-gray-900">
+            <Link href="#" className="underline hover:text-gray-600 font-serif text-gray-900">
               Internal link →
             </Link>
-            <a href="#" className="underline hover:text-emerald-600 font-serif text-gray-900">
+            <a href="#" className="underline hover:text-gray-600 font-serif text-gray-900">
               External link ↗
             </a>
           </div>
-          <div className="text-xs font-mono text-gray-600 pt-1">↑ underline, hover = emerald</div>
+          <div className="text-xs font-mono text-gray-600 pt-1">↑ underline, hover = gray-600</div>
         </div>
 
         <Divider />
@@ -72,11 +72,11 @@ export function Components() {
            <div className="space-y-4">
              <div className="space-y-1">
                <Divider variant="default" />
-               <div className="text-xs font-mono text-gray-600 text-right">Default (gray-200)</div>
+               <div className="text-xs font-mono text-gray-600 text-right">Default (gray-900)</div>
              </div>
              <div className="space-y-1">
                <Divider variant="strong" />
-               <div className="text-xs font-mono text-gray-600 text-right">Strong (gray-900)</div>
+               <div className="text-xs font-mono text-gray-600 text-right">Strong (gray-900, 2px)</div>
              </div>
            </div>
         </div>
