@@ -3,15 +3,15 @@ import { Divider } from "@/components/ui/Divider";
 
 export function Typography() {
   return (
-    <section className="py-12">
-      <div className="mb-6">
+    <section className="py-8">
+      <div className="mb-4">
         <Label>TYPOGRAPHY</Label>
       </div>
-      <Divider className="mb-12" />
+      <Divider className="mb-6" />
       
-      <div className="space-y-8">
+      <div className="space-y-6">
         {/* Headings */}
-        <div className="space-y-6">
+        <div className="space-y-4">
           <div className="flex items-baseline justify-between border-b border-gray-200 dark:border-gray-800 pb-2">
             <span className="text-4xl font-sans font-bold text-gray-900 dark:text-gray-50">Display</span>
             <span className="font-mono text-xs text-gray-600">4xl Sans Bold</span>
@@ -71,7 +71,7 @@ export function Typography() {
         </div>
       </div>
       
-      <div className="pt-12">
+      <div className="pt-8">
         <Divider />
       </div>
     </section>

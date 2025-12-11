@@ -16,6 +16,11 @@ export function Colors() {
     { shade: 900, className: "bg-gray-900" },
     { shade: 950, className: "bg-gray-950" },
   ];
+
+  const primitives = [
+    { name: "White", className: "bg-white", hex: "#FFFFFF" },
+    { name: "Black", className: "bg-black", hex: "#000000" },
+  ];
   
   const emeralds = [
     { shade: 50, className: "bg-emerald-50" },
@@ -74,13 +79,29 @@ export function Colors() {
   ];
 
   return (
-    <section className="py-12">
-      <div className="mb-6">
+    <section className="py-8">
+      <div className="mb-4">
         <Label>COLORS</Label>
       </div>
-      <Divider className="mb-12" />
+      <Divider className="mb-6" />
       
-      <div className="space-y-12">
+      <div className="space-y-8">
+        {/* Primitives */}
+        <div className="space-y-4">
+           <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Primitives</h3>
+           <div className="flex flex-wrap gap-4">
+             {primitives.map(({ name, className, hex }) => (
+               <div key={name} className="flex flex-col space-y-2">
+                  <div className={cn(
+                    "w-12 h-12 border border-hairline border-gray-200 dark:border-gray-700",
+                    className
+                  )} />
+                  <span className="font-mono text-xs text-gray-600">{name}</span>
+               </div>
+             ))}
+           </div>
+        </div>
+
         {/* Grays */}
         <div className="space-y-4">
            <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Gray</h3>
@@ -98,7 +119,7 @@ export function Colors() {
         </div>
 
         {/* Accents */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Emeralds */}
           <div className="space-y-4">
@@ -167,9 +188,8 @@ export function Colors() {
 
         </div>
       </div>
-
       
-      <div className="pt-12">
+      <div className="pt-8">
         <Divider />
       </div>
     </section>

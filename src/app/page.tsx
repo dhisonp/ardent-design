@@ -9,7 +9,7 @@ import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <MainContainer className="px-6 md:px-16">
+    <MainContainer className="px-5 md:px-6">
       <Header />
       <Philosophy />
       <Influences />

@@ -4,7 +4,7 @@ import { Divider } from "@/components/ui/Divider";
 
 export function Header() {
   return (
-    <section className="relative pt-12 pb-12">
+    <section className="relative pt-8 pb-4">
       <div className="space-y-4">
         <h1 className="text-4xl font-sans font-bold tracking-tight text-gray-900 dark:text-gray-50">
           Ardent Design
@@ -18,7 +18,7 @@ export function Header() {
         </div>
       </div>
       
-      <div className="pt-12">
+      <div className="pt-8">
         <Divider />
       </div>
     </section>

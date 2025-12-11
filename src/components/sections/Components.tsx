@@ -8,13 +8,13 @@ import { cn } from "@/lib/cn";
 
 export function Components() {
   return (
-    <section className="py-12">
-      <div className="mb-6">
+    <section className="py-8">
+      <div className="mb-4">
         <Label>COMPONENTS</Label>
       </div>
-      <Divider className="mb-12" />
+      <Divider className="mb-6" />
       
-      <div className="space-y-12">
+      <div className="space-y-8">
         {/* Buttons */}
         <div className="space-y-4">
           <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Buttons</h3>
@@ -94,7 +94,7 @@ export function Components() {
 
       </div>
       
-      <div className="pt-12">
+      <div className="pt-8">
         <Divider />
       </div>
     </section>

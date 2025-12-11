@@ -31,8 +31,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn(inter.variable, domine.variable, ibmPlexMono.variable)}>
-      <body className="min-h-full flex justify-center">
-        <div className="w-full max-w-[678px] min-h-screen bg-white">
+      <body className="min-h-screen flex justify-center bg-gray-100 py-6">
+        <div className="w-full max-w-[678px] min-h-full bg-white">
           {children}
         </div>
       </body>

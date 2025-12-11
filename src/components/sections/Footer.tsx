@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="pb-12">
-      <div className="pt-12 pb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+    <footer className="pb-8">
+      <div className="pt-8 pb-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div className="font-serif italic text-gray-900 dark:text-gray-50">
           Built with intention.
         </div>

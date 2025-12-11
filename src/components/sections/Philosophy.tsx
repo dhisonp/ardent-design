@@ -38,13 +38,13 @@ const tenets = [
 
 export function Philosophy() {
   return (
-    <section className="py-12">
-      <div className="mb-6">
+    <section className="py-8">
+      <div className="mb-4">
         <Label>PHILOSOPHY</Label>
       </div>
-      <Divider className="mb-8" />
+      <Divider className="mb-6" />
       
-      <div className="grid gap-6">
+      <div className="grid gap-4">
         {tenets.map((tenet, index) => (
           <div key={index} className="space-y-3">
             <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">
@@ -57,7 +57,7 @@ export function Philosophy() {
         ))}
       </div>
       
-      <div className="pt-12">
+      <div className="pt-8">
         <Divider />
       </div>
     </section>

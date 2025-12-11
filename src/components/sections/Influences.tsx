@@ -4,11 +4,11 @@ import { Card } from "@/components/ui/Card";
 
 export function Influences() {
   return (
-    <section className="py-12">
-      <div className="mb-6">
+    <section className="py-8">
+      <div className="mb-4">
         <Label>INFLUENCES</Label>
       </div>
-      <Divider className="mb-12" />
+      <Divider className="mb-6" />
       
       <div className="grid grid-cols-1 md:grid-cols-3">
         {/* Card 1 */}
@@ -51,7 +51,7 @@ export function Influences() {
         </Card>
       </div>
       
-      <div className="pt-12">
+      <div className="pt-8">
         <Divider />
       </div>
     </section>
