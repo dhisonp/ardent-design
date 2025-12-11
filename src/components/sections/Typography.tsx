@@ -39,7 +39,7 @@ export function Typography() {
         {/* Body */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <p className="text-base font-serif text-gray-900 leading-relaxed">
+            <p className="text-base font-serif text-gray-900">
               Body text is set in a serif typeface for comfortable extended reading. The letterforms carry editorial weight, like technical papers or quality documentation.
             </p>
           </div>

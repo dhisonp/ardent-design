@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Domine, IBM_Plex_Mono } from "next/font/google";
+import { Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/cn";
 
@@ -8,10 +8,7 @@ const inter = Inter({
   variable: "--font-sans" 
 });
 
-const domine = Domine({ 
-  subsets: ["latin"], 
-  variable: "--font-serif" 
-});
+
 
 const ibmPlexMono = IBM_Plex_Mono({ 
   weight: ["400", "500"],
@@ -30,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(inter.variable, domine.variable, ibmPlexMono.variable)}>
+    <html lang="en" className={cn(inter.variable, ibmPlexMono.variable)}>
       <body className="min-h-screen flex justify-center bg-gray-100 py-6">
         <div className="w-full max-w-[678px] min-h-full bg-white border-y border-gray-200">
           {children}
