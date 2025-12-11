@@ -13,7 +13,7 @@ export function Button({ variant, children, className, ...props }: ButtonProps) 
         "font-mono text-sm uppercase tracking-wide",
         "px-4 py-2 rounded-none",
         "transition-colors duration-150",
-        "border-hairline", // Ensure border width is handled
+        "border",
 
         // Variant: Primary
         variant === "primary" && [
@@ -24,9 +24,9 @@ export function Button({ variant, children, className, ...props }: ButtonProps) 
 
         // Variant: Secondary
         variant === "secondary" && [
-          "bg-transparent border-gray-200 text-gray-900",
+          "bg-transparent border-gray-900 text-gray-900",
           "hover:bg-gray-100",
-          "dark:border-gray-800 dark:text-gray-50 dark:hover:bg-gray-900"
+          "dark:border-gray-50 dark:text-gray-50 dark:hover:bg-gray-900"
         ],
 
         // Variant: Ghost
