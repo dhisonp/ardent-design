@@ -47,12 +47,8 @@ export function Philosophy() {
       <div className="grid gap-2">
         {tenets.map((tenet, index) => (
           <div key={index} className="space-y-1">
-            <h3 className="font-sans font-bold text-gray-900">
-              {tenet.title}
-            </h3>
-            <p className="font-serif text-gray-900">
-              {tenet.description}
-            </p>
+            <h3 className="font-sans font-bold text-gray-900">{tenet.title}</h3>
+            <p className="font-serif text-gray-900">{tenet.description}</p>
           </div>
         ))}
       </div>

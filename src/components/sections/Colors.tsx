@@ -74,9 +74,7 @@ export function Colors() {
     { shade: 900, className: "bg-goldenrod-900" },
   ];
 
-  const ambers = [
-    { shade: 500, className: "bg-amber-500" },
-  ];
+  const ambers = [{ shade: 500, className: "bg-amber-500" }];
 
   return (
     <section className="py-6">
@@ -88,104 +86,110 @@ export function Colors() {
       <div className="space-y-6">
         {/* Primitives */}
         <div className="space-y-4">
-           <h3 className="text-sm font-sans font-bold text-gray-900">Primitives</h3>
-           <div className="flex flex-wrap gap-4">
-             {primitives.map(({ name, className, hex }) => (
-               <div key={name} className="flex flex-col space-y-2">
-                  <div className={cn(
-                    "w-10 h-10 border border-hairline border-gray-900",
-                    className
-                  )} />
-                  <span className="font-mono text-xs text-gray-600">{name}</span>
-               </div>
-             ))}
-           </div>
+          <h3 className="text-sm font-sans font-bold text-gray-900">Primitives</h3>
+          <div className="flex flex-wrap gap-4">
+            {primitives.map(({ name, className, hex }) => (
+              <div key={name} className="flex flex-col space-y-2">
+                <div
+                  className={cn("w-10 h-10 border border-hairline border-gray-900", className)}
+                />
+                <span className="font-mono text-xs text-gray-600">{name}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Grays */}
         <div className="space-y-4">
-           <h3 className="text-sm font-sans font-bold text-gray-900">Gray</h3>
-           <div className="flex flex-wrap gap-0">
-             {grays.map(({ shade, className }) => (
-               <div key={shade} className="flex flex-col space-y-2 mr-2 mb-2">
-                  <div className={cn(
-                    "w-10 h-10 border border-hairline border-gray-900",
-                    className
-                  )} />
-                  <span className="font-mono text-xs text-gray-600">{shade}</span>
-               </div>
-             ))}
-           </div>
+          <h3 className="text-sm font-sans font-bold text-gray-900">Gray</h3>
+          <div className="flex flex-wrap gap-0">
+            {grays.map(({ shade, className }) => (
+              <div key={shade} className="flex flex-col space-y-2 mr-2 mb-2">
+                <div
+                  className={cn("w-10 h-10 border border-hairline border-gray-900", className)}
+                />
+                <span className="font-mono text-xs text-gray-600">{shade}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Accents */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
           {/* Emeralds */}
           <div className="space-y-4">
-             <h3 className="text-sm font-sans font-bold text-gray-900">Emerald</h3>
-             <div className="flex flex-wrap gap-2">
-               {emeralds.map(({ shade, className }) => (
-                 <div key={shade} className="space-y-1">
-                   <div className={cn("w-10 h-10 border border-hairline border-gray-200", className)} />
-                   <div className="font-mono text-xs text-gray-600">{shade}</div>
-                 </div>
-               ))}
-             </div>
+            <h3 className="text-sm font-sans font-bold text-gray-900">Emerald</h3>
+            <div className="flex flex-wrap gap-2">
+              {emeralds.map(({ shade, className }) => (
+                <div key={shade} className="space-y-1">
+                  <div
+                    className={cn("w-10 h-10 border border-hairline border-gray-200", className)}
+                  />
+                  <div className="font-mono text-xs text-gray-600">{shade}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Oceans */}
           <div className="space-y-4">
-             <h3 className="text-sm font-sans font-bold text-gray-900">Ocean</h3>
-             <div className="flex flex-wrap gap-2">
-               {oceans.map(({ shade, className }) => (
-                 <div key={shade} className="space-y-1">
-                   <div className={cn("w-10 h-10 border border-hairline border-gray-200", className)} />
-                   <div className="font-mono text-xs text-gray-600">{shade}</div>
-                 </div>
-               ))}
-             </div>
+            <h3 className="text-sm font-sans font-bold text-gray-900">Ocean</h3>
+            <div className="flex flex-wrap gap-2">
+              {oceans.map(({ shade, className }) => (
+                <div key={shade} className="space-y-1">
+                  <div
+                    className={cn("w-10 h-10 border border-hairline border-gray-200", className)}
+                  />
+                  <div className="font-mono text-xs text-gray-600">{shade}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Goldenrods */}
           <div className="space-y-4">
-             <h3 className="text-sm font-sans font-bold text-gray-900">Goldenrod</h3>
-             <div className="flex flex-wrap gap-2">
-               {goldenrods.map(({ shade, className }) => (
-                 <div key={shade} className="space-y-1">
-                   <div className={cn("w-10 h-10 border border-hairline border-gray-200", className)} />
-                   <div className="font-mono text-xs text-gray-600">{shade}</div>
-                 </div>
-               ))}
-             </div>
+            <h3 className="text-sm font-sans font-bold text-gray-900">Goldenrod</h3>
+            <div className="flex flex-wrap gap-2">
+              {goldenrods.map(({ shade, className }) => (
+                <div key={shade} className="space-y-1">
+                  <div
+                    className={cn("w-10 h-10 border border-hairline border-gray-200", className)}
+                  />
+                  <div className="font-mono text-xs text-gray-600">{shade}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Reds */}
           <div className="space-y-4">
-             <h3 className="text-sm font-sans font-bold text-gray-900">Red</h3>
-             <div className="flex flex-wrap gap-2">
-               {reds.map(({ shade, className }) => (
-                 <div key={shade} className="space-y-1">
-                   <div className={cn("w-10 h-10 border border-hairline border-gray-200", className)} />
-                   <div className="font-mono text-xs text-gray-600">{shade}</div>
-                 </div>
-               ))}
-             </div>
+            <h3 className="text-sm font-sans font-bold text-gray-900">Red</h3>
+            <div className="flex flex-wrap gap-2">
+              {reds.map(({ shade, className }) => (
+                <div key={shade} className="space-y-1">
+                  <div
+                    className={cn("w-10 h-10 border border-hairline border-gray-200", className)}
+                  />
+                  <div className="font-mono text-xs text-gray-600">{shade}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
-           {/* Ambers */}
-           <div className="space-y-4">
-             <h3 className="text-sm font-sans font-bold text-gray-900">Amber</h3>
-             <div className="flex flex-wrap gap-2">
-               {ambers.map(({ shade, className }) => (
-                 <div key={shade} className="space-y-1">
-                   <div className={cn("w-10 h-10 border border-hairline border-gray-200", className)} />
-                   <div className="font-mono text-xs text-gray-600">{shade}</div>
-                 </div>
-               ))}
-             </div>
+          {/* Ambers */}
+          <div className="space-y-4">
+            <h3 className="text-sm font-sans font-bold text-gray-900">Amber</h3>
+            <div className="flex flex-wrap gap-2">
+              {ambers.map(({ shade, className }) => (
+                <div key={shade} className="space-y-1">
+                  <div
+                    className={cn("w-10 h-10 border border-hairline border-gray-200", className)}
+                  />
+                  <div className="font-mono text-xs text-gray-600">{shade}</div>
+                </div>
+              ))}
+            </div>
           </div>
-
         </div>
       </div>
     </section>

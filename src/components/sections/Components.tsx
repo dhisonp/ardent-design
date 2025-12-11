@@ -51,13 +51,11 @@ export function Components() {
             <div className="space-y-4">
               <h4 className="font-sans font-bold text-gray-900">Card Title</h4>
               <p className="font-serif text-gray-900">
-                Card content in serif. This is body text demonstrating how a
-                card contains information.
+                Card content in serif. This is body text demonstrating how a card contains
+                information.
               </p>
               <div className="pt-2">
-                <span className="font-mono text-xs text-gray-600">
-                  metadata · 2024-01-15
-                </span>
+                <span className="font-mono text-xs text-gray-600">metadata · 2024-01-15</span>
               </div>
             </div>
           </Card>
@@ -69,37 +67,25 @@ export function Components() {
         <div className="space-y-4">
           <h3 className="text-sm font-sans font-bold text-gray-900">Links</h3>
           <div className="flex gap-8">
-            <Link
-              href="#"
-              className="underline hover:text-gray-600 font-serif text-gray-900"
-            >
+            <Link href="#" className="underline hover:text-gray-600 font-serif text-gray-900">
               Internal link →
             </Link>
-            <a
-              href="#"
-              className="underline hover:text-gray-600 font-serif text-gray-900"
-            >
+            <a href="#" className="underline hover:text-gray-600 font-serif text-gray-900">
               External link ↗
             </a>
           </div>
-          <div className="text-xs font-mono text-gray-600 pt-1">
-            ↑ underline, hover = gray-600
-          </div>
+          <div className="text-xs font-mono text-gray-600 pt-1">↑ underline, hover = gray-600</div>
         </div>
 
         <Divider />
 
         {/* Dividers */}
         <div className="space-y-4">
-          <h3 className="text-sm font-sans font-bold text-gray-900">
-            Dividers
-          </h3>
+          <h3 className="text-sm font-sans font-bold text-gray-900">Dividers</h3>
           <div className="space-y-4">
             <div className="space-y-1">
               <Divider variant="default" />
-              <div className="text-xs font-mono text-gray-600 text-right">
-                Default (gray-900)
-              </div>
+              <div className="text-xs font-mono text-gray-600 text-right">Default (gray-900)</div>
             </div>
             <div className="space-y-1">
               <Divider variant="strong" />
@@ -116,9 +102,7 @@ export function Components() {
           <div className="max-w-md">
             <Input placeholder="Placeholder text" />
           </div>
-          <div className="text-xs font-mono text-gray-600 pt-1">
-            ↑ hairline border, no radius
-          </div>
+          <div className="text-xs font-mono text-gray-600 pt-1">↑ hairline border, no radius</div>
         </div>
       </div>
     </section>

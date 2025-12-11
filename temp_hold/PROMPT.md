@@ -5,6 +5,7 @@
 You are building a showcase for **Ardent Design**, a brutalist-influenced design system inspired by U.S. Graphics Company, IBM Carbon, and technical documentation aesthetics.
 
 **Before writing ANY code**, read these files in the project directory:
+
 - `ARDENT_DESIGN.md` — Philosophy and principles
 - `tokens.json` — Token specification
 
@@ -17,6 +18,7 @@ You are building a showcase for **Ardent Design**, a brutalist-influenced design
 Think: 1970s NASA control panels. Bell Labs technical papers. IBM Selectric documentation. Machine-readable typefaces. Dense, explicit, systematic.
 
 **Visual characteristics:**
+
 - Hairline rules dividing sections (not whitespace alone)
 - Monospace text for ALL labels, metadata, percentages
 - Serif body text (not sans-serif)
@@ -157,7 +159,7 @@ export default config;
   body {
     @apply bg-gray-50 text-gray-900 font-serif antialiased;
   }
-  
+
   .dark body {
     @apply bg-gray-950 text-gray-50;
   }
@@ -176,20 +178,20 @@ Use `next/font/google`:
 // app/layout.tsx
 import { Inter, Domine, IBM_Plex_Mono } from "next/font/google";
 
-const inter = Inter({ 
-  subsets: ["latin"], 
-  variable: "--font-sans" 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
 });
 
-const domine = Domine({ 
-  subsets: ["latin"], 
-  variable: "--font-serif" 
+const domine = Domine({
+  subsets: ["latin"],
+  variable: "--font-serif",
 });
 
-const ibmPlexMono = IBM_Plex_Mono({ 
+const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
-  subsets: ["latin"], 
-  variable: "--font-mono" 
+  subsets: ["latin"],
+  variable: "--font-mono",
 });
 ```
 
@@ -266,6 +268,7 @@ Each tenet: bold sans-serif title on its own line, then serif description below.
 ```
 
 Three columns, equal width. Each is a Card component with:
+
 - Title: font-sans, bold
 - Percentage: font-mono, gray-500
 - Description: font-serif, small
@@ -426,7 +429,7 @@ interface ButtonProps {
 // ALL variants: px-4 py-2, no border-radius (rounded-none)
 // ALL variants: transition-colors duration-150
 
-// primary:  bg-gray-900 text-gray-50 
+// primary:  bg-gray-900 text-gray-50
 //           hover:bg-gray-800
 //           dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-200
 
@@ -544,4 +547,4 @@ The showcase must itself be proof that the system works.
 
 ---
 
-*If it looks like every other Tailwind site, start over.*
+_If it looks like every other Tailwind site, start over._

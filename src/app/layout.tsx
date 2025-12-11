@@ -31,14 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={cn(
-        inter.variable,
-        ibmPlexMono.variable,
-        oldStandardTT.variable,
-      )}
-    >
+    <html lang="en" className={cn(inter.variable, ibmPlexMono.variable, oldStandardTT.variable)}>
       <body className="min-h-screen flex justify-center bg-gray-100 sm:py-6 md:py-9 lg:py-12">
         <div className="w-full max-w-[678px] min-h-full bg-white border-y border-gray-900">
           {children}

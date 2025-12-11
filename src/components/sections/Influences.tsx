@@ -14,9 +14,7 @@ export function Influences() {
         {/* Card 1 */}
         <Card className="border-b-0 md:border-b md:border-r-0 border-gray-900">
           <div className="space-y-4">
-            <h3 className="text-base font-sans font-bold text-gray-900">
-              U.S. Graphics Co.
-            </h3>
+            <h3 className="text-base font-sans font-bold text-gray-900">U.S. Graphics Co.</h3>
             <span className="font-mono text-xs text-gray-600">50%</span>
             <p className="text-sm font-serif text-gray-900">
               Control panels, technical docs, dense and explicit.
@@ -27,9 +25,7 @@ export function Influences() {
         {/* Card 2 */}
         <Card className="border-b-0 md:border-b md:border-r-0 border-gray-900">
           <div className="space-y-4">
-            <h3 className="text-base font-sans font-bold text-gray-900">
-              IBM Carbon
-            </h3>
+            <h3 className="text-base font-sans font-bold text-gray-900">IBM Carbon</h3>
             <span className="font-mono text-xs text-gray-600">30%</span>
             <p className="text-sm font-serif text-gray-900">
               Systematic rigor, modular components, accessibility.
@@ -40,9 +36,7 @@ export function Influences() {
         {/* Card 3 */}
         <Card className="border-gray-900">
           <div className="space-y-4">
-            <h3 className="text-base font-sans font-bold text-gray-900">
-              Recursive
-            </h3>
+            <h3 className="text-base font-sans font-bold text-gray-900">Recursive</h3>
             <span className="font-mono text-xs text-gray-600">20%</span>
             <p className="text-sm font-serif text-gray-900">
               Warmth within structure. Humanity in monospace.

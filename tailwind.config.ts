@@ -93,11 +93,11 @@ const config: Config = {
       spacing: {
         // Overriding default spacing for "tightness"
         "4": "0.875rem", // 14px (was 16px)
-        "5": "1rem",     // 16px (was 20px)
-        "6": "1.25rem",  // 20px (was 24px)
-        "8": "1.75rem",  // 28px (was 32px)
-        "12": "2.5rem",  // 40px (was 48px)
-        "16": "3.5rem",  // 56px (was 64px)
+        "5": "1rem", // 16px (was 20px)
+        "6": "1.25rem", // 20px (was 24px)
+        "8": "1.75rem", // 28px (was 32px)
+        "12": "2.5rem", // 40px (was 48px)
+        "16": "3.5rem", // 56px (was 64px)
       },
       borderWidth: {
         hairline: "1px",

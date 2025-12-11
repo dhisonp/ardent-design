@@ -6,9 +6,7 @@ export function Header() {
   return (
     <section className="relative pt-6 pb-2">
       <div className="space-y-4">
-        <h1 className="text-4xl font-sans font-bold tracking-tight text-gray-900">
-          Ardent Design
-        </h1>
+        <h1 className="text-4xl font-sans font-bold tracking-tight text-gray-900">Ardent Design</h1>
 
         <Divider variant="strong" />
 

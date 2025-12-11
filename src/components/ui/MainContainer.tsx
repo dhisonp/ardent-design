@@ -10,7 +10,7 @@ export function MainContainer({ children, className }: MainContainerProps) {
     <div
       className={cn(
         "max-w-page mx-auto min-h-screen bg-white border-x border-gray-900 shadow-none",
-        className,
+        className
       )}
     >
       {children}
