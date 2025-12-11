@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn(inter.variable, domine.variable, ibmPlexMono.variable)}>
       <body className="min-h-screen flex justify-center bg-gray-100 py-6">
-        <div className="w-full max-w-[678px] min-h-full bg-white">
+        <div className="w-full max-w-[678px] min-h-full bg-white border-y border-gray-200">
           {children}
         </div>
       </body>
