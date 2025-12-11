@@ -8,16 +8,16 @@ import { cn } from "@/lib/cn";
 
 export function Components() {
   return (
-    <section className="py-8">
-      <div className="mb-4">
+    <section className="py-6">
+      <div className="mb-2">
         <Label>COMPONENTS</Label>
       </div>
-      <Divider className="mb-6" />
+      <Divider className="mb-4" />
       
-      <div className="space-y-8">
+      <div className="space-y-6">
         {/* Buttons */}
         <div className="space-y-4">
-          <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Buttons</h3>
+          <h3 className="text-sm font-sans font-bold text-gray-900">Buttons</h3>
           <div className="flex flex-wrap gap-4">
             <Button variant="primary">Primary</Button>
             <Button variant="secondary">Secondary</Button>
@@ -34,11 +34,11 @@ export function Components() {
 
         {/* Card */}
         <div className="space-y-4">
-          <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Card</h3>
+          <h3 className="text-sm font-sans font-bold text-gray-900">Card</h3>
           <Card className="max-w-xl">
              <div className="space-y-4">
-               <h4 className="font-sans font-bold text-gray-900 dark:text-gray-50">Card Title</h4>
-               <p className="font-serif text-gray-900 dark:text-gray-50">
+               <h4 className="font-sans font-bold text-gray-900">Card Title</h4>
+               <p className="font-serif text-gray-900">
                  Card content in serif. This is body text demonstrating how a card contains information.
                </p>
                <div className="pt-2">
@@ -52,12 +52,12 @@ export function Components() {
 
         {/* Links */}
         <div className="space-y-4">
-          <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Links</h3>
+          <h3 className="text-sm font-sans font-bold text-gray-900">Links</h3>
           <div className="flex gap-8">
-            <Link href="#" className="underline hover:text-emerald-600 dark:hover:text-emerald-400 font-serif text-gray-900 dark:text-gray-50">
+            <Link href="#" className="underline hover:text-emerald-600 font-serif text-gray-900">
               Internal link →
             </Link>
-            <a href="#" className="underline hover:text-emerald-600 dark:hover:text-emerald-400 font-serif text-gray-900 dark:text-gray-50">
+            <a href="#" className="underline hover:text-emerald-600 font-serif text-gray-900">
               External link ↗
             </a>
           </div>
@@ -68,7 +68,7 @@ export function Components() {
 
         {/* Dividers */}
         <div className="space-y-4">
-           <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Dividers</h3>
+           <h3 className="text-sm font-sans font-bold text-gray-900">Dividers</h3>
            <div className="space-y-4">
              <div className="space-y-1">
                <Divider variant="default" />
@@ -85,7 +85,7 @@ export function Components() {
 
         {/* Input */}
         <div className="space-y-4">
-           <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Input</h3>
+           <h3 className="text-sm font-sans font-bold text-gray-900">Input</h3>
            <div className="max-w-md">
              <Input placeholder="Placeholder text" />
            </div>
@@ -94,7 +94,7 @@ export function Components() {
 
       </div>
       
-      <div className="pt-8">
+      <div className="pt-6">
         <Divider />
       </div>
     </section>

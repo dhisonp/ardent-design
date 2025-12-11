@@ -79,21 +79,21 @@ export function Colors() {
   ];
 
   return (
-    <section className="py-8">
-      <div className="mb-4">
+    <section className="py-6">
+      <div className="mb-2">
         <Label>COLORS</Label>
       </div>
-      <Divider className="mb-6" />
+      <Divider className="mb-4" />
       
-      <div className="space-y-8">
+      <div className="space-y-6">
         {/* Primitives */}
         <div className="space-y-4">
-           <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Primitives</h3>
+           <h3 className="text-sm font-sans font-bold text-gray-900">Primitives</h3>
            <div className="flex flex-wrap gap-4">
              {primitives.map(({ name, className, hex }) => (
                <div key={name} className="flex flex-col space-y-2">
                   <div className={cn(
-                    "w-12 h-12 border border-hairline border-gray-200 dark:border-gray-700",
+                    "w-10 h-10 border border-hairline border-gray-200",
                     className
                   )} />
                   <span className="font-mono text-xs text-gray-600">{name}</span>
@@ -104,12 +104,12 @@ export function Colors() {
 
         {/* Grays */}
         <div className="space-y-4">
-           <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Gray</h3>
+           <h3 className="text-sm font-sans font-bold text-gray-900">Gray</h3>
            <div className="flex flex-wrap gap-0">
              {grays.map(({ shade, className }) => (
                <div key={shade} className="flex flex-col space-y-2 mr-2 mb-2">
                   <div className={cn(
-                    "w-12 h-12 border border-hairline border-gray-200 dark:border-gray-700",
+                    "w-10 h-10 border border-hairline border-gray-200",
                     className
                   )} />
                   <span className="font-mono text-xs text-gray-600">{shade}</span>
@@ -123,11 +123,11 @@ export function Colors() {
           
           {/* Emeralds */}
           <div className="space-y-4">
-             <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Emerald</h3>
+             <h3 className="text-sm font-sans font-bold text-gray-900">Emerald</h3>
              <div className="flex flex-wrap gap-2">
                {emeralds.map(({ shade, className }) => (
                  <div key={shade} className="space-y-1">
-                   <div className={cn("w-12 h-12 border border-hairline border-gray-200", className)} />
+                   <div className={cn("w-10 h-10 border border-hairline border-gray-200", className)} />
                    <div className="font-mono text-xs text-gray-600">{shade}</div>
                  </div>
                ))}
@@ -136,11 +136,11 @@ export function Colors() {
 
           {/* Oceans */}
           <div className="space-y-4">
-             <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Ocean</h3>
+             <h3 className="text-sm font-sans font-bold text-gray-900">Ocean</h3>
              <div className="flex flex-wrap gap-2">
                {oceans.map(({ shade, className }) => (
                  <div key={shade} className="space-y-1">
-                   <div className={cn("w-12 h-12 border border-hairline border-gray-200", className)} />
+                   <div className={cn("w-10 h-10 border border-hairline border-gray-200", className)} />
                    <div className="font-mono text-xs text-gray-600">{shade}</div>
                  </div>
                ))}
@@ -149,11 +149,11 @@ export function Colors() {
 
           {/* Goldenrods */}
           <div className="space-y-4">
-             <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Goldenrod</h3>
+             <h3 className="text-sm font-sans font-bold text-gray-900">Goldenrod</h3>
              <div className="flex flex-wrap gap-2">
                {goldenrods.map(({ shade, className }) => (
                  <div key={shade} className="space-y-1">
-                   <div className={cn("w-12 h-12 border border-hairline border-gray-200", className)} />
+                   <div className={cn("w-10 h-10 border border-hairline border-gray-200", className)} />
                    <div className="font-mono text-xs text-gray-600">{shade}</div>
                  </div>
                ))}
@@ -162,11 +162,11 @@ export function Colors() {
 
           {/* Reds */}
           <div className="space-y-4">
-             <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Red</h3>
+             <h3 className="text-sm font-sans font-bold text-gray-900">Red</h3>
              <div className="flex flex-wrap gap-2">
                {reds.map(({ shade, className }) => (
                  <div key={shade} className="space-y-1">
-                   <div className={cn("w-12 h-12 border border-hairline border-gray-200", className)} />
+                   <div className={cn("w-10 h-10 border border-hairline border-gray-200", className)} />
                    <div className="font-mono text-xs text-gray-600">{shade}</div>
                  </div>
                ))}
@@ -175,11 +175,11 @@ export function Colors() {
 
            {/* Ambers */}
            <div className="space-y-4">
-             <h3 className="text-sm font-sans font-bold text-gray-900 dark:text-gray-50">Amber</h3>
+             <h3 className="text-sm font-sans font-bold text-gray-900">Amber</h3>
              <div className="flex flex-wrap gap-2">
                {ambers.map(({ shade, className }) => (
                  <div key={shade} className="space-y-1">
-                   <div className={cn("w-12 h-12 border border-hairline border-gray-200", className)} />
+                   <div className={cn("w-10 h-10 border border-hairline border-gray-200", className)} />
                    <div className="font-mono text-xs text-gray-600">{shade}</div>
                  </div>
                ))}
@@ -189,7 +189,7 @@ export function Colors() {
         </div>
       </div>
       
-      <div className="pt-8">
+      <div className="pt-6">
         <Divider />
       </div>
     </section>
