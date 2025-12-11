@@ -197,16 +197,18 @@ Used for labels, captions, metadata, timestamps, code, and system information. W
 
 ### Philosophy
 
-High-contrast monochrome foundation with semantic accent colors. Color is never decorative—it always signifies something.
+Harsh, punchy, high-contrast monochrome foundation with semantic accent colors. Color is never decorative—it always signifies something. Maximum contrast for maximum impact.
 
 ### Palette
 
-**Base:** High-contrast black and off-white.
+**Base:** Harsh white and harsh black for primary surfaces.
 
-- Light mode background: `#FAFAFA` (gray.50)
-- Light mode text: `#141414` (gray.900)
-- Dark mode background: `#0A0A0A` (gray.950)
-- Dark mode text: `#FAFAFA` (gray.50)
+- Light mode primary background: `#FFFFFF` (white)
+- Light mode secondary background: `#FAFAFA` (gray.50)
+- Light mode text: `#000000` (black)
+- Dark mode primary background: `#000000` (black)
+- Dark mode secondary background: `#050505` (gray.950)
+- Dark mode text: `#FFFFFF` (white)
 
 **Accent Colors:**
 
@@ -225,15 +227,15 @@ Light mode semantic mappings:
 
 | Token                  | Value           | Usage                        |
 |------------------------|-----------------|------------------------------|
-| bg.primary             | gray.50         | Page background              |
-| bg.secondary           | white           | Card/surface background      |
+| bg.primary             | white           | Page background (harsh)      |
+| bg.secondary           | gray.50         | Card/surface background      |
 | bg.tertiary            | gray.100        | Hover states, subtle fills   |
-| bg.inverse             | gray.900        | Inverted surfaces            |
+| bg.inverse             | black           | Inverted surfaces (harsh)    |
 | bg.accent              | emerald.500     | Success backgrounds          |
 | bg.warning             | goldenrod.50    | Warning backgrounds          |
 | bg.info                | ocean.50        | Informational backgrounds    |
 | bg.error               | red.50          | Error backgrounds            |
-| text.primary           | gray.900        | Primary text                 |
+| text.primary           | black           | Primary text (harsh)         |
 | text.secondary         | gray.600        | Secondary text               |
 | text.muted             | gray.400        | Disabled, placeholder        |
 | text.accent            | emerald.600     | Success text                 |
@@ -241,8 +243,8 @@ Light mode semantic mappings:
 | text.info              | ocean.600       | Informational text           |
 | text.link              | ocean.600       | Link text                    |
 | text.error             | red.600         | Error text                   |
-| border.default         | gray.900        | Standard borders             |
-| border.strong          | gray.900        | Emphasized borders           |
+| border.default         | black           | Standard borders (harsh)     |
+| border.strong          | black           | Emphasized borders (harsh)   |
 
 Dark mode inverts appropriately—see `tokens.json` for full mappings.
 
@@ -310,7 +312,7 @@ Flat surfaces. No shadows. Borders are structural—they delineate, they don't d
 
 ### Cards
 
-Cards are containers with hairline borders on white (light) or gray.900 (dark) backgrounds. No shadows. No rounded corners. Compact internal padding (1.25rem). Tight internal gap (0.75rem) between elements.
+Cards are containers with harsh black hairline borders on gray.50 (light) or gray.950 (dark) backgrounds. No shadows. No rounded corners. Compact internal padding (1.25rem). Tight internal gap (0.75rem) between elements.
 
 ### Buttons
 
@@ -331,7 +333,7 @@ Use arrow indicators for external links (↗) and navigation (→).
 
 ### Dividers
 
-Hairline rules. Default dividers use gray.900 (harsh, high-contrast). Can be made thicker with the strong variant (gray.900, 2px).
+Hairline rules. Default dividers use pure black (harsh, maximum contrast). Can be made thicker with the strong variant (black, 2px).
 
 ---
 
