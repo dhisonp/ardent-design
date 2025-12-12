@@ -5,6 +5,7 @@ import { Influences } from "@/components/sections/Influences";
 import { Typography } from "@/components/sections/Typography";
 import { Colors } from "@/components/sections/Colors";
 import { Components } from "@/components/sections/Components";
+import { DataTable } from "@/components/sections/DataTable";
 import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Typography />
       <Colors />
       <Components />
+      <DataTable />
       <Footer />
     </MainContainer>
   );
