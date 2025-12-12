@@ -359,6 +359,50 @@ decorate.
 
 ---
 
+## Layout Patterns
+
+### Default Page Container (Document Style)
+
+Unless otherwise specified, pages should use a centered document-style container
+pattern that adapts between mobile and desktop:
+
+**Desktop (sm breakpoint and above):**
+
+- Content wrapped in a centered container with `max-width: 678px`
+- Body has vertical padding (increases with viewport: sm:py-6, md:py-9, lg:py-12)
+- Gray background (`gray.100`) outside the content area
+- White background for the content container
+- Top and bottom borders only (hairline black borders)
+- Creates a "document on a desk" or "report card" aesthetic
+
+**Mobile (below sm breakpoint):**
+
+- Full-width container (no max-width constraint)
+- No vertical padding on body
+- White background
+- Top and bottom borders only
+- Full-bleed reading experience
+
+This pattern emphasizes the document-like quality of content while maintaining
+optimal reading width on larger screens. The mobile version ignores the
+container to maximize screen real estate.
+
+**Implementation:**
+
+```tsx
+// In root layout
+<body className="min-h-screen flex justify-center bg-gray-100 sm:py-6 md:py-9 lg:py-12">
+  <div className="w-full max-w-[678px] min-h-full bg-white border-y border-gray-900">
+    {children}
+  </div>
+</body>
+```
+
+Content within this container should use horizontal padding (e.g., `px-3
+md:px-5`) to ensure proper margins on all screen sizes.
+
+---
+
 ## Components
 
 ### Cards
@@ -424,6 +468,7 @@ When assisting with Ardent Design projects, follow these directives:
 ### Do
 
 - Use the token system. Reference `tokens.json` for all values.
+- Use the default document-style container pattern (max-width 678px, centered, with gray surround on desktop) unless explicitly specified otherwise.
 - Prefer serif (Source Serif / Domine) for body text.
 - Prefer monospace (IBM Plex Mono / Geist Mono) for labels, metadata, code.
 - Prefer sans-serif (Fira Sans / Inter / FK Grotesk) for headings.
