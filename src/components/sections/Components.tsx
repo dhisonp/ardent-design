@@ -25,14 +25,14 @@ export function Components() {
           </div>
           <div className="flex gap-12 pt-2">
             <div className="text-xs font-mono text-gray-600 w-[84px] text-center">
-              ↑ solid
+              ↑ emerald
               <br />
-              dark bg
+              solid fill
             </div>
             <div className="text-xs font-mono text-gray-600 w-[100px] text-center">
-              ↑ outlined
+              ↑ goldenrod
               <br />
-              hairline
+              fill on hover
             </div>
             <div className="text-xs font-mono text-gray-600 w-[60px] text-center">
               ↑ text only
@@ -67,10 +67,10 @@ export function Components() {
         <div className="space-y-4">
           <h3 className="text-sm font-sans font-bold text-gray-900">Links</h3>
           <div className="flex gap-8">
-            <Link href="#" className="underline hover:text-gray-600 font-serif text-gray-900">
+            <Link href="#" className="underline hover:text-gray-600 font-mono text-sm text-gray-900">
               Internal link →
             </Link>
-            <a href="#" className="underline hover:text-gray-600 font-serif text-gray-900">
+            <a href="#" className="underline hover:text-gray-600 font-mono text-sm text-gray-900">
               External link ↗
             </a>
           </div>
@@ -99,7 +99,7 @@ export function Components() {
         {/* Input */}
         <div className="space-y-4">
           <h3 className="text-sm font-sans font-bold text-gray-900">Input</h3>
-          <div className="max-w-md">
+          <div className="max-w-xs">
             <Input placeholder="Placeholder text" />
           </div>
           <div className="text-xs font-mono text-gray-600 pt-1">↑ hairline border, no radius</div>

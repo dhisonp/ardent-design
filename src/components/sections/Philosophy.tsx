@@ -38,16 +38,16 @@ const tenets = [
 
 export function Philosophy() {
   return (
-    <section className="py-6">
+    <section className="py-4">
       <div className="mb-2">
         <Label>PHILOSOPHY</Label>
       </div>
-      <Divider className="mb-4" />
+      <Divider className="mb-3" />
 
-      <div className="grid gap-2">
+      <div className="grid gap-1.5">
         {tenets.map((tenet, index) => (
-          <div key={index} className="space-y-1">
-            <h3 className="font-sans font-bold text-gray-900">{tenet.title}</h3>
+          <div key={index} className="space-y-0.5">
+            <h3 className="font-sans font-bold text-gray-700">{tenet.title}</h3>
             <p className="font-serif text-gray-900">{tenet.description}</p>
           </div>
         ))}

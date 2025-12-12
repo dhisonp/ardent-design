@@ -17,16 +17,16 @@ export function Button({ variant, children, className, ...props }: ButtonProps) 
 
         // Variant: Primary
         variant === "primary" && [
-          "bg-gray-900 text-gray-50 border-transparent",
-          "hover:bg-gray-800",
-          // "dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-200"
+          "bg-emerald-500 text-white border-transparent",
+          "hover:bg-emerald-400",
+          // "dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-400"
         ],
 
         // Variant: Secondary
         variant === "secondary" && [
-          "bg-transparent border-gray-900 text-gray-900",
-          "hover:bg-gray-100",
-          // "dark:border-gray-50 dark:text-gray-50 dark:hover:bg-gray-900"
+          "bg-transparent border-goldenrod-500 text-gray-900",
+          "hover:bg-goldenrod-500 hover:text-white",
+          // "dark:border-goldenrod-500 dark:text-gray-50 dark:hover:bg-goldenrod-500 dark:hover:text-gray-900"
         ],
 
         // Variant: Ghost
