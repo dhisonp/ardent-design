@@ -13,24 +13,24 @@ export function Typography() {
         {/* Headings */}
         <div className="space-y-4">
           <div className="flex items-baseline justify-between border-b border-gray-900 pb-2">
-            <span className="text-4xl font-mono font-bold text-gray-900">Display</span>
-            <span className="font-mono text-xs text-gray-600">4xl Mono Bold</span>
+            <span className="text-4xl font-sans font-bold text-gray-900">Display</span>
+            <span className="font-mono text-xs text-gray-600">4xl Sans Bold</span>
           </div>
           <div className="flex items-baseline justify-between border-b border-gray-900 pb-2">
-            <span className="text-3xl font-mono font-bold text-gray-900">Heading 1</span>
-            <span className="font-mono text-xs text-gray-600">3xl Mono Bold</span>
+            <span className="text-3xl font-sans font-bold text-gray-900">Heading 1</span>
+            <span className="font-mono text-xs text-gray-600">3xl Sans Bold</span>
           </div>
           <div className="flex items-baseline justify-between border-b border-gray-900 pb-2">
-            <span className="text-2xl font-mono font-bold text-gray-900">Heading 2</span>
-            <span className="font-mono text-xs text-gray-600">2xl Mono Bold</span>
+            <span className="text-2xl font-sans font-bold text-gray-900">Heading 2</span>
+            <span className="font-mono text-xs text-gray-600">2xl Sans Bold</span>
           </div>
           <div className="flex items-baseline justify-between border-b border-gray-900 pb-2">
-            <span className="text-xl font-mono font-bold text-gray-900">Heading 3</span>
-            <span className="font-mono text-xs text-gray-600">xl Mono Bold</span>
+            <span className="text-xl font-sans font-bold text-gray-900">Heading 3</span>
+            <span className="font-mono text-xs text-gray-600">xl Sans Bold</span>
           </div>
           <div className="flex items-baseline justify-between border-b border-gray-900 pb-2">
-            <span className="text-lg font-mono font-bold text-gray-900">Heading 4</span>
-            <span className="font-mono text-xs text-gray-600">lg Mono Bold</span>
+            <span className="text-lg font-sans font-bold text-gray-900">Heading 4</span>
+            <span className="font-mono text-xs text-gray-600">lg Sans Bold</span>
           </div>
         </div>
 

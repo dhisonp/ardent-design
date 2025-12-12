@@ -6,6 +6,7 @@ import { Typography } from "@/components/sections/Typography";
 import { Colors } from "@/components/sections/Colors";
 import { Components } from "@/components/sections/Components";
 import { DataTable } from "@/components/sections/DataTable";
+import { Dashboard } from "@/components/sections/Dashboard";
 import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
@@ -18,7 +19,9 @@ export default function Home() {
       <Colors />
       <Components />
       <DataTable />
+      <Dashboard />
       <Footer />
     </MainContainer>
   );
 }
+
