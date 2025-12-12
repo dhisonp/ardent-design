@@ -12,9 +12,9 @@ export function Input({ className, ...props }: InputProps) {
         "border border-gray-900",
         "focus:border-gray-900",
         "focus:outline-none",
-        "text-sm font-mono text-gray-900",
+        "text-sm font-sans text-gray-900",
         "placeholder:text-gray-400",
-        "px-3 py-2",
+        "px-2.5 py-1.5",
         "rounded-none", // no radius
         "w-full",
         className

@@ -10,30 +10,26 @@ export function Button({ variant, children, className, ...props }: ButtonProps) 
     <button
       className={cn(
         // Base styles
-        "font-mono text-sm uppercase tracking-wide",
+        "font-sans text-sm font-medium uppercase tracking-wide",
         "px-3 py-1.5 rounded-none",
-        "transition-colors duration-150",
         "border",
 
         // Variant: Primary
         variant === "primary" && [
-          "bg-emerald-500 text-white border-transparent",
-          "hover:bg-emerald-400",
-          // "dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-400"
+          "bg-emerald-400 text-black border-black",
+          "hover:bg-emerald-500 hover:border-emerald-500",
         ],
 
         // Variant: Secondary
         variant === "secondary" && [
           "bg-transparent border-goldenrod-500 text-gray-900",
           "hover:bg-goldenrod-500 hover:text-white",
-          // "dark:border-goldenrod-500 dark:text-gray-50 dark:hover:bg-goldenrod-500 dark:hover:text-gray-900"
         ],
 
         // Variant: Ghost
         variant === "ghost" && [
           "bg-transparent text-gray-900 border-transparent",
           "hover:bg-gray-100",
-          // "dark:text-gray-50 dark:hover:bg-gray-900"
         ],
         className
       )}

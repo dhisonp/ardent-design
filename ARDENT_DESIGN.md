@@ -184,13 +184,13 @@ Don't abstract away the system to "protect" users. Expose controls. Show options
 
 Ardent Design uses a three-family type system, each with distinct roles:
 
-### Sans-Serif: Headings and Structural Elements
+### Sans-Serif: Headings, Buttons, and Form Elements
 
 **Stack:** Inter → Helvetica Neue → Arial → sans-serif
 
 Used for content headings (H1–H4), display type, and structural hierarchy within content. Provides
 clear typographic hierarchy and readability. Bold weight for all heading levels. Clean, rational,
-and engineered. Also used for UI controls, buttons, and interactive elements.
+and engineered. Also used for UI controls, buttons (medium weight), input fields, and interactive elements.
 
 ### Serif: Body Text
 
@@ -400,11 +400,11 @@ backgrounds. No shadows. No rounded corners. Compact internal padding (1.25rem).
 
 Three variants:
 
-- **Primary:** Solid inverse background (dark on light, light on dark). No border.
-- **Secondary:** Transparent background, hairline border.
-- **Ghost:** Transparent background, no border. Subtle hover state.
+- **Primary:** Bright emerald-400 background (#26AB62), black text (medium weight), black border. Hover: emerald-500 background (#009148) with matching border. Sans-serif font, no animations.
+- **Secondary:** Transparent background, goldenrod-500 border, gray-900 text. Hover: goldenrod-500 background with white text.
+- **Ghost:** Transparent background, transparent border, gray-900 text. Hover: gray-100 background.
 
-All buttons: no border-radius.
+All buttons: no border-radius, sans-serif font (medium weight), uppercase with wide tracking, px-3 py-1.5 padding.
 
 ### Links
 
@@ -468,18 +468,21 @@ When assisting with Ardent Design projects, follow these directives:
 - Use the token system. Reference `tokens.json` for all values.
 - Use the default document-style container pattern (max-width 678px, centered, with gray surround on
   desktop) unless explicitly specified otherwise.
-- Prefer sans-serif (Inter) for headings (H1-H4) and display type.
+- Prefer sans-serif (Inter) for headings (H1-H4), display type, buttons, and form inputs.
 - Prefer serif (Old Standard TT / Source Serif) for body text.
 - Prefer monospace (IBM Plex Mono / Geist Mono) for labels, section dividers, metadata, captions,
   and code.
 - Use the Label component (uppercase mono) for section dividers, not headings.
 - Use hairline (1px) borders.
-- Use emerald (`#009148`) for success and positive actions.
-- Use goldenrod (`#D4A012`) for warnings and cautions.
-- Use ocean (`#1A7A9C`) for links and informational states.
-- Use red (`#DC2626`) for errors and destructive actions.
+- Use emerald-400 (`#26AB62`) for primary button background, emerald-500 (`#009148`) for hover states.
+- Use goldenrod-500 (`#FDB515`) for warnings and cautions.
+- Use ocean-500 (`#0060BF`) for links and informational states.
+- Use red-500 (`#DC2626`) for errors and destructive actions.
 - Keep surfaces flat. No box-shadows for elevation.
-- No border-radius on cards or buttons. Minimal (2px) on inputs only.
+- No border-radius on all components (buttons, cards, inputs).
+- No animations or transitions on interactive elements.
+- Button text uses medium weight, not bold.
+- Input padding: px-2.5 py-1.5.
 - Respect the spacing scale. Bias toward tighter spacing.
 - When in doubt, be more direct, more explicit, more information-dense.
 - Favor high contrast. Text should be clearly legible.
@@ -488,8 +491,8 @@ When assisting with Ardent Design projects, follow these directives:
 
 - Don't add decorative elements.
 - Don't use color for decoration—only for meaning.
-- Don't add animations unless they communicate state change.
-- Don't use rounded corners beyond the minimal input radius.
+- Don't add animations or transitions.
+- Don't use rounded corners on any components.
 - Don't add shadows.
 - Don't use gradients.
 - Don't soften language to be "friendly." Be clear and direct.
