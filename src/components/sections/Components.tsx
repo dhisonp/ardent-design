@@ -67,7 +67,10 @@ export function Components() {
         <div className="space-y-4">
           <h3 className="text-sm font-sans font-bold text-gray-900">Links</h3>
           <div className="flex gap-8">
-            <Link href="#" className="underline hover:text-gray-600 font-mono text-sm text-gray-900">
+            <Link
+              href="#"
+              className="underline hover:text-gray-600 font-mono text-sm text-gray-900"
+            >
               Internal link →
             </Link>
             <a href="#" className="underline hover:text-gray-600 font-mono text-sm text-gray-900">

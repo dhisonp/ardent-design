@@ -95,8 +95,8 @@ export function DataTable() {
 
       <div className="space-y-4">
         <p className="font-serif text-sm text-gray-600">
-          Dense, information-rich display. Monospace headers signal data.
-          Semantic color for status. No shadows, no decoration—only structure.
+          Dense, information-rich display. Monospace headers signal data. Semantic color for status.
+          No shadows, no decoration—only structure.
         </p>
 
         <Table>

@@ -103,8 +103,8 @@ export function Dashboard() {
 
       <div className="space-y-3">
         <p className="font-serif text-base text-gray-700">
-          Dense metrics grid with ASCII sparklines. Information-rich, exposing
-          trends transparently. Semantic status indicators.
+          Dense metrics grid with ASCII sparklines. Information-rich, exposing trends transparently.
+          Semantic status indicators.
         </p>
 
         <div className="border border-gray-900">
@@ -112,7 +112,7 @@ export function Dashboard() {
             {metrics.map((m, i) => {
               const isLastColumn = (i + 1) % 4 === 0;
               const isLastRow = i >= metrics.length - 4;
-              
+
               return (
                 <MetricCard
                   key={m.label}

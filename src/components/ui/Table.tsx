@@ -19,11 +19,7 @@ interface TableHeadProps {
 }
 
 export function TableHead({ children, className }: TableHeadProps) {
-  return (
-    <thead className={cn("border-b border-gray-400", className)}>
-      {children}
-    </thead>
-  );
+  return <thead className={cn("border-b border-gray-400", className)}>{children}</thead>;
 }
 
 interface TableBodyProps {
@@ -41,11 +37,7 @@ interface TableRowProps {
 }
 
 export function TableRow({ children, className }: TableRowProps) {
-  return (
-    <tr className={cn("border-b border-gray-200 last:border-b-0", className)}>
-      {children}
-    </tr>
-  );
+  return <tr className={cn("border-b border-gray-200 last:border-b-0", className)}>{children}</tr>;
 }
 
 interface TableHeaderCellProps {
@@ -54,11 +46,7 @@ interface TableHeaderCellProps {
   align?: "left" | "right" | "center";
 }
 
-export function TableHeaderCell({
-  children,
-  className,
-  align = "left",
-}: TableHeaderCellProps) {
+export function TableHeaderCell({ children, className, align = "left" }: TableHeaderCellProps) {
   return (
     <th
       className={cn(

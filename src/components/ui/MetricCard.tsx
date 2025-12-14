@@ -55,9 +55,7 @@ export function MetricCard({
 
   return (
     <div className={cn("p-2", className)}>
-      <div className="font-mono text-xs uppercase tracking-wide text-gray-500 mb-1">
-        {label}
-      </div>
+      <div className="font-mono text-xs uppercase tracking-wide text-gray-500 mb-1">{label}</div>
       <div className="flex items-baseline gap-2">
         <span className="font-mono text-xl font-bold tabular-nums">{value}</span>
         <span className={cn("font-mono text-xs", trendColor)}>
