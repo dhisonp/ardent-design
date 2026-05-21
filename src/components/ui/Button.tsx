@@ -17,7 +17,7 @@ export function Button({ variant, children, className, ...props }: ButtonProps) 
         // Variant: Primary
         variant === "primary" && [
           "bg-emerald-400 text-black border-black",
-          "hover:bg-emerald-500 hover:border-emerald-500",
+          "hover:bg-emerald-500 hover:text-white hover:border-emerald-500",
         ],
 
         // Variant: Secondary

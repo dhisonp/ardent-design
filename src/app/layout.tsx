@@ -15,7 +15,7 @@ const oldStandardTT = Old_Standard_TT({
 });
 
 const ibmPlexMono = IBM_Plex_Mono({
-  weight: ["400", "500"],
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
   variable: "--font-mono",
 });
@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn(inter.variable, ibmPlexMono.variable, oldStandardTT.variable)}>
       <body className="min-h-screen flex justify-center bg-gray-100 sm:py-6 md:py-9 lg:py-12">
-        <div className="w-full max-w-[678px] min-h-full bg-white border-y border-gray-900">
+        <div className="w-full max-w-[760px] min-h-full bg-white border-y border-gray-900">
           {children}
         </div>
       </body>

@@ -10,9 +10,9 @@ export function Input({ className, ...props }: InputProps) {
       className={cn(
         "bg-white",
         "border border-gray-900",
-        "focus:border-gray-900",
+        "focus:border-black",
         "focus:outline-none",
-        "text-sm font-sans text-gray-900",
+        "text-xs font-sans text-gray-900",
         "placeholder:text-gray-400",
         "px-2.5 py-1.5",
         "rounded-none", // no radius

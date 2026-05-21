@@ -1,19 +1,82 @@
-import { Divider } from "@/components/ui/Divider";
-import Link from "next/link";
-
 export function Footer() {
   return (
-    <footer className="pb-8">
-      <div className="pt-6 pb-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <div className="font-serif text-sm italic text-gray-900">Built with intention.</div>
-
-        <div className="flex gap-6 items-center">
-          {/*<Link href="#" className="text-sm font-sans hover:underline text-gray-900">
-            Repository ↗
-          </Link>*/}
-          <span className="font-mono text-xs text-gray-600">Dhison Padma. 2025.</span>
+    <footer>
+      <div className="colophon">
+        <div className="grid">
+          <div>
+            <h4>About this document</h4>
+            <p>
+              Single-page documentation site for Ardent Design v0.1.1. Built as an Ardent artifact —
+              the system applied to itself.
+            </p>
+          </div>
+          <div>
+            <h4>Source files</h4>
+            <ul>
+              <li>
+                ·{" "}
+                <a
+                  href="/ARDENT_DESIGN.md"
+                  style={{ color: "var(--text-link)", textDecoration: "underline" }}
+                >
+                  ARDENT_DESIGN.md
+                </a>
+              </li>
+              <li>
+                ·{" "}
+                <a
+                  href="/tokens.json"
+                  style={{ color: "var(--text-link)", textDecoration: "underline" }}
+                >
+                  tokens.json
+                </a>{" "}
+                · v0.1.3
+              </li>
+              <li>
+                ·{" "}
+                <a
+                  href="/AGENTS.md"
+                  style={{ color: "var(--text-link)", textDecoration: "underline" }}
+                >
+                  AGENTS.md
+                </a>
+              </li>
+              <li>
+                ·{" "}
+                <a
+                  href="/globals.css"
+                  style={{ color: "var(--text-link)", textDecoration: "underline" }}
+                >
+                  styles.css
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Closing</h4>
+            <p>Simple complexity. Ridding the spaces between aesthetics and function.</p>
+          </div>
         </div>
       </div>
+
+      <dl className="meta-bar bottom">
+        <div>
+          <dt>END</dt>
+          <dd>OF DOCUMENT</dd>
+        </div>
+        <div>
+          <dt>SECTIONS</dt>
+          <dd>10</dd>
+        </div>
+        <div>
+          <dt>SET</dt>
+          <dd>INTER · OST · IBM PLEX MONO</dd>
+        </div>
+        <div>
+          <dt>©</dt>
+          <dd>D. Padma · 2026 · v0.1.3</dd>
+        </div>
+      </dl>
     </footer>
   );
 }

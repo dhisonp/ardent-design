@@ -1,164 +1,263 @@
-import { Label } from "@/components/ui/Label";
-import { Divider } from "@/components/ui/Divider";
-import { MetricCard } from "@/components/ui/MetricCard";
-import { cn } from "@/lib/cn";
-
-const metrics = [
-  {
-    label: "Active Flights",
-    value: "2,847",
-    trend: "up" as const,
-    delta: "+12",
-    sparkline: [42, 45, 41, 48, 52, 49, 55, 58, 54, 61, 59, 63],
-  },
-  {
-    label: "On-Time",
-    value: "94.2%",
-    trend: "up" as const,
-    delta: "+1.8",
-    sparkline: [88, 89, 91, 90, 92, 91, 93, 92, 94, 93, 95, 94],
-  },
-  {
-    label: "Delayed",
-    value: "142",
-    trend: "down" as const,
-    delta: "-23",
-    sparkline: [180, 175, 168, 172, 165, 158, 162, 155, 148, 152, 145, 142],
-  },
-  {
-    label: "Cancelled",
-    value: "8",
-    trend: "down" as const,
-    delta: "-4",
-    sparkline: [15, 12, 14, 11, 13, 10, 12, 9, 11, 8, 10, 8],
-  },
-  {
-    label: "Fleet Active",
-    value: "312",
-    trend: "neutral" as const,
-    sparkline: [310, 312, 311, 313, 312, 314, 312, 313, 311, 312, 313, 312],
-  },
-  {
-    label: "Maintenance",
-    value: "24",
-    trend: "up" as const,
-    delta: "+3",
-    sparkline: [18, 19, 20, 19, 21, 20, 22, 21, 23, 22, 24, 24],
-  },
-  {
-    label: "Fleet Age",
-    value: "8.4yr",
-    trend: "neutral" as const,
-  },
-  {
-    label: "Utilization",
-    value: "11.2hr",
-    trend: "up" as const,
-    delta: "+0.4",
-    sparkline: [9.8, 10.1, 10.3, 10.2, 10.5, 10.4, 10.8, 10.7, 11.0, 10.9, 11.2, 11.2],
-  },
-  {
-    label: "Pax Today",
-    value: "284K",
-    trend: "up" as const,
-    delta: "+8%",
-    sparkline: [245, 252, 248, 261, 255, 268, 272, 265, 278, 282, 275, 284],
-  },
-  {
-    label: "Load Factor",
-    value: "87.3%",
-    trend: "up" as const,
-    delta: "+2.1",
-    sparkline: [82, 83, 84, 83, 85, 84, 86, 85, 87, 86, 88, 87],
-  },
-  {
-    label: "Connections",
-    value: "42.1K",
-    trend: "neutral" as const,
-    sparkline: [41, 42, 41, 43, 42, 43, 42, 43, 41, 42, 43, 42],
-  },
-  {
-    label: "Bags",
-    value: "312K",
-    trend: "up" as const,
-    delta: "+6%",
-    sparkline: [285, 290, 288, 295, 292, 300, 298, 305, 302, 310, 308, 312],
-  },
-];
-
-const alerts = [
-  { type: "warning", code: "WX-142", message: "ORD ground stop until 1845Z" },
-  { type: "info", code: "MX-089", message: "N742UA returned to service" },
-  { type: "warning", code: "WX-143", message: "DEN flow control 15 min delays" },
-  { type: "error", code: "OPS-12", message: "JFK Runway 13L/31R closed" },
-];
-
 export function Dashboard() {
   return (
-    <section className="py-6">
-      <div className="mb-2">
-        <Label>DASHBOARD</Label>
-      </div>
-      <Divider className="mb-3" />
+    <section id="inuse" className="section" data-screen-label="09 In Use">
+      <div className="lane">
+        <header className="section-head">
+          <span className="num">§09</span>
+          <span className="rule"></span>
+          <span className="meta">SURFACE · DASHBOARD FRAGMENT</span>
+        </header>
 
-      <div className="space-y-3">
-        <p className="font-serif text-base text-gray-700">
-          Dense metrics grid with ASCII sparklines. Information-rich, exposing trends transparently.
-          Semantic status indicators.
+        <h2 className="section-title">The system, assembled.</h2>
+        <p className="section-lede">
+          A working surface that uses only the tokens and components defined above. Same vocabulary;
+          nothing new introduced. No shadows. No radii. No animation.
         </p>
+      </div>
 
-        <div className="border border-gray-900">
-          <div className="grid grid-cols-4">
-            {metrics.map((m, i) => {
-              const isLastColumn = (i + 1) % 4 === 0;
-              const isLastRow = i >= metrics.length - 4;
-
-              return (
-                <MetricCard
-                  key={m.label}
-                  label={m.label}
-                  value={m.value}
-                  trend={m.trend}
-                  delta={m.delta}
-                  sparkline={m.sparkline}
-                  className={cn(
-                    "border-r border-b border-gray-900",
-                    isLastColumn && "border-r-0",
-                    isLastRow && "border-b-0"
-                  )}
-                />
-              );
-            })}
+      <div className="ui-demo">
+        <div className="ui-bar">
+          <div className="brand">
+            <span style={{ fontFamily: "var(--font-mono)", color: "var(--gray-400)" }}>
+              ARDENT/
+            </span>
+            <strong>console</strong>
           </div>
+          <div className="crumb">
+            <b>workspace</b>
+            <span>/</span>
+            <b>orchard</b>
+            <span>/</span>
+            <b className="active">deployments</b>
+          </div>
+          <div className="pill live">LIVE</div>
+          <div className="pill">v0.1.1 · 2026.05.20</div>
         </div>
 
-        <div className="border border-gray-900 p-2">
-          <div className="font-mono text-xs uppercase tracking-wide text-gray-500 mb-2">
-            System Alerts
-          </div>
-          <div className="space-y-1">
-            {alerts.map((a, i) => (
-              <div key={i} className="flex items-start gap-2 font-mono text-xs">
-                <span
-                  className={
-                    a.type === "error"
-                      ? "text-red-500"
-                      : a.type === "warning"
-                        ? "text-goldenrod-600"
-                        : "text-ocean-600"
-                  }
-                >
-                  [{a.code}]
-                </span>
-                <span className="text-gray-900">{a.message}</span>
+        <div className="ui-grid">
+          <nav className="ui-side">
+            <div className="group">Workspace</div>
+            <a>
+              <span>Overview</span>
+              <span className="c">8</span>
+            </a>
+            <a className="active">
+              <span>Deployments</span>
+              <span className="c">14</span>
+            </a>
+            <a>
+              <span>Services</span>
+              <span className="c">32</span>
+            </a>
+            <a>
+              <span>Secrets</span>
+              <span className="c">21</span>
+            </a>
+            <div className="group">Telemetry</div>
+            <a>
+              <span>Logs</span>
+              <span className="c">live</span>
+            </a>
+            <a>
+              <span>Traces</span>
+              <span className="c">live</span>
+            </a>
+            <a>
+              <span>Metrics</span>
+              <span className="c">6</span>
+            </a>
+            <div className="group">Account</div>
+            <a>
+              <span>Members</span>
+              <span className="c">4</span>
+            </a>
+            <a>
+              <span>Billing</span>
+              <span className="c">—</span>
+            </a>
+            <a>
+              <span>Settings</span>
+              <span className="c">—</span>
+            </a>
+          </nav>
+
+          <main className="ui-main">
+            <div className="ui-h">
+              <h2>Deployments</h2>
+              <div className="actions">
+                <button className="btn btn-ghost">Filter</button>
+                <button className="btn btn-secondary">Configure</button>
+                <button className="btn">
+                  New deploy <span style={{ marginLeft: "6px" }}>→</span>
+                </button>
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
 
-        <div className="font-mono text-xs text-gray-500">
-          ↑ emerald · ↓ red · → stable · ▁▂▃▄▅▆▇█ 12-hr trend
+            <div className="ui-stats">
+              <div>
+                <div className="k">SUCCESSFUL · 24H</div>
+                <div className="v">
+                  38<span className="delta">+12</span>
+                </div>
+              </div>
+              <div>
+                <div className="k">FAILED · 24H</div>
+                <div className="v" style={{ color: "var(--red-600)" }}>
+                  2
+                  <span className="delta" style={{ color: "var(--red-600)" }}>
+                    +1
+                  </span>
+                </div>
+              </div>
+              <div>
+                <div className="k">AVG DURATION</div>
+                <div className="v">
+                  1:42
+                  <span className="delta" style={{ color: "var(--text-secondary)" }}>
+                    −4s
+                  </span>
+                </div>
+              </div>
+              <div>
+                <div className="k">QUEUE</div>
+                <div className="v">
+                  3
+                  <span className="delta" style={{ color: "var(--text-secondary)" }}>
+                    idle
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <table className="ui-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Service</th>
+                  <th>Branch</th>
+                  <th>Status</th>
+                  <th className="num">Duration</th>
+                  <th className="num">Δ size</th>
+                  <th>Pushed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>dep_8a14</td>
+                  <td>web-edge</td>
+                  <td>main</td>
+                  <td className="ok">DEPLOYED</td>
+                  <td className="num">1:38</td>
+                  <td className="num">+2.1 kB</td>
+                  <td>2 min ago</td>
+                </tr>
+                <tr>
+                  <td>dep_8a13</td>
+                  <td>api-core</td>
+                  <td>main</td>
+                  <td className="ok">DEPLOYED</td>
+                  <td className="num">2:04</td>
+                  <td className="num">−0.8 kB</td>
+                  <td>11 min ago</td>
+                </tr>
+                <tr>
+                  <td>dep_8a12</td>
+                  <td>worker-fanout</td>
+                  <td>feat/retry</td>
+                  <td className="wn">RUNNING</td>
+                  <td className="num">0:42</td>
+                  <td className="num">—</td>
+                  <td>14 min ago</td>
+                </tr>
+                <tr>
+                  <td>dep_8a11</td>
+                  <td>web-edge</td>
+                  <td>main</td>
+                  <td className="er">FAILED</td>
+                  <td className="num">0:08</td>
+                  <td className="num">—</td>
+                  <td>26 min ago</td>
+                </tr>
+                <tr>
+                  <td>dep_8a10</td>
+                  <td>api-core</td>
+                  <td>main</td>
+                  <td className="ok">DEPLOYED</td>
+                  <td className="num">1:51</td>
+                  <td className="num">+0.4 kB</td>
+                  <td>1 h ago</td>
+                </tr>
+                <tr>
+                  <td>dep_8a09</td>
+                  <td>scheduler</td>
+                  <td>main</td>
+                  <td className="ok">DEPLOYED</td>
+                  <td className="num">1:12</td>
+                  <td className="num">+1.2 kB</td>
+                  <td>2 h ago</td>
+                </tr>
+                <tr>
+                  <td>dep_8a08</td>
+                  <td>worker-fanout</td>
+                  <td>main</td>
+                  <td className="ok">DEPLOYED</td>
+                  <td className="num">2:18</td>
+                  <td className="num">+0.0 kB</td>
+                  <td>4 h ago</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p className="t-caption muted" style={{ marginTop: "12px" }}>
+              Showing 7 of 38 ·{" "}
+              <a href="#" style={{ color: "var(--text-link)" }}>
+                view all →
+              </a>
+            </p>
+          </main>
         </div>
+      </div>
+
+      <div className="lane" style={{ paddingTop: "32px" }}>
+        <div className="label-row strong">
+          <span className="label">What is reused, where</span>
+        </div>
+        <table className="spec">
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Token</th>
+              <th>Component</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Status pills</td>
+              <td>border.muted · emerald.500</td>
+              <td>Label</td>
+            </tr>
+            <tr>
+              <td>Sidebar</td>
+              <td>border.muted · bg.tertiary</td>
+              <td>Divider · Link</td>
+            </tr>
+            <tr>
+              <td>Stat tiles</td>
+              <td>border.muted · spacing.card.padding</td>
+              <td>Card</td>
+            </tr>
+            <tr>
+              <td>Table</td>
+              <td>borderWidth.hairline · gray.50 header</td>
+              <td>Table</td>
+            </tr>
+            <tr>
+              <td>Action row</td>
+              <td>—</td>
+              <td>Button (3 variants)</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   );
