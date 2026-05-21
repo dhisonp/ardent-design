@@ -1,0 +1,2336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ardent Design — v0.1.3</title>
+
+    <!-- Fonts: the three families the system specifies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&amp;family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body style="">
+    <div class="frame">
+      <article class="doc">
+        <!-- ============================================================
+         TOP META BAR  (machine-readable identity strip)
+         ============================================================ -->
+        <dl class="meta-bar">
+          <div>
+            <dt>SYSTEM</dt>
+            <dd>ARDENT/DESIGN</dd>
+          </div>
+          <div>
+            <dt>VERSION</dt>
+            <dd>0.1.3</dd>
+          </div>
+          <div>
+            <dt>BUILD</dt>
+            <dd>2026.05.21</dd>
+          </div>
+          <div>
+            <dt>STATUS</dt>
+            <dd>LIVE · DRAFT</dd>
+          </div>
+        </dl>
+
+        <!-- ============================================================
+         COVER  /  §00
+         ============================================================ -->
+        <header class="cover" data-screen-label="00 Cover">
+          <div class="cover-eyebrow">
+            <span class="left">DOC · ARDENT/SPEC/0.1.3</span>
+            <span></span>
+            <span class="right" style="">D. Padma · PERSONAL</span>
+          </div>
+
+          <h1 class="cover-title">Ardent<span class="ampersand">,</span></h1>
+          <h1 class="cover-title">a&nbsp;design system.</h1>
+
+          <p class="cover-sub">
+            A philosophy and token specification for interfaces that are precise, intentional, and
+            timeless. Built to span GUIs, TUIs and the web—one vocabulary across surfaces.
+          </p>
+
+          <dl class="cover-grid">
+            <div>
+              <dt>Author</dt>
+              <dd style="">Dhison Padma</dd>
+            </div>
+            <div>
+              <dt>Surface</dt>
+              <dd>Web · TUI · GUI</dd>
+            </div>
+            <div>
+              <dt>Influences</dt>
+              <dd>USG · Carbon · Recursive</dd>
+            </div>
+            <div>
+              <dt>License</dt>
+              <dd>Personal — share-on-request</dd>
+            </div>
+            <div>
+              <dt>Tokens</dt>
+              <dd>57 primitive · 41 semantic</dd>
+            </div>
+            <div>
+              <dt>Families</dt>
+              <dd>3 (sans · serif · mono)</dd>
+            </div>
+            <div>
+              <dt>Base unit</dt>
+              <dd>4px / 0.25rem</dd>
+            </div>
+            <div>
+              <dt>Radius</dt>
+              <dd>0</dd>
+            </div>
+          </dl>
+        </header>
+
+        <!-- ============================================================
+         TABLE OF CONTENTS
+         ============================================================ -->
+        <nav aria-label="Contents" data-screen-label="00 Contents">
+          <div class="lane" style="padding-top: 32px; padding-bottom: 8px">
+            <div class="label-row strong"><span class="label">Contents</span></div>
+          </div>
+          <ol class="toc">
+            <li>
+              <span class="num">§00</span
+              ><a href="#manifesto"
+                >Manifesto<span class="leader"></span><span class="pg">004</span></a
+              >
+            </li>
+            <li>
+              <span class="num">§01</span
+              ><a href="#tenets"
+                >The eight tenets<span class="leader"></span><span class="pg">006</span></a
+              >
+            </li>
+            <li>
+              <span class="num">§02</span
+              ><a href="#influences"
+                >Influences — 50 / 30 / 20<span class="leader"></span><span class="pg">010</span></a
+              >
+            </li>
+            <li>
+              <span class="num">§03</span
+              ><a href="#typography"
+                >Typography<span class="leader"></span><span class="pg">014</span></a
+              >
+            </li>
+            <li>
+              <span class="num">§04</span
+              ><a href="#color">Color<span class="leader"></span><span class="pg">022</span></a>
+            </li>
+            <li>
+              <span class="num">§05</span
+              ><a href="#spacing"
+                >Spacing &amp; rhythm<span class="leader"></span><span class="pg">030</span></a
+              >
+            </li>
+            <li>
+              <span class="num">§06</span
+              ><a href="#container"
+                >The document container<span class="leader"></span><span class="pg">034</span></a
+              >
+            </li>
+            <li>
+              <span class="num">§07</span
+              ><a href="#components"
+                >Components<span class="leader"></span><span class="pg">036</span></a
+              >
+            </li>
+            <li>
+              <span class="num">§08</span
+              ><a href="#density"
+                >Density vs. sparsity<span class="leader"></span><span class="pg">042</span></a
+              >
+            </li>
+            <li>
+              <span class="num">§09</span
+              ><a href="#inuse"
+                >In use — a working surface<span class="leader"></span
+                ><span class="pg">046</span></a
+              >
+            </li>
+            <li>
+              <span class="num">§M</span
+              ><a href="#improvements"
+                >Improvements (annotations)<span class="leader"></span
+                ><span class="pg">050</span></a
+              >
+            </li>
+          </ol>
+        </nav>
+
+        <!-- ============================================================
+         §00 — MANIFESTO
+         ============================================================ -->
+        <section id="manifesto" class="section lane" data-screen-label="00 Manifesto">
+          <header class="section-head">
+            <span class="num">§00</span>
+            <span class="rule"></span>
+            <span class="meta">MANIFESTO · 1 PAGE</span>
+          </header>
+
+          <p class="label" style="margin-bottom: 24px">CORE PRINCIPLE</p>
+
+          <h2
+            style="
+              font-family: var(--font-sans);
+              font-weight: 700;
+              font-size: clamp(40px, 7vw, 76px);
+              line-height: 0.95;
+              letter-spacing: -0.035em;
+              margin-bottom: 32px;
+              text-wrap: balance;
+            "
+          >
+            Intentionality<br />over style.
+          </h2>
+
+          <p class="lede" style="max-width: 54ch; margin-bottom: 24px; text-wrap: pretty">
+            Ardent is neither minimalist nor maximalist. It is
+            <em>intentional</em>. Sparse when focus is required. Dense when information rewards
+            exploration. The context determines the approach; the sin is arbitrariness.
+          </p>
+
+          <p class="body" style="max-width: 54ch; margin-bottom: 16px">
+            A portfolio landing page may be quiet and restrained — a doorway. A dashboard or
+            technical document may be dense and layered — a workbench. Both are correct if the
+            decision is conscious.
+          </p>
+
+          <p class="body" style="max-width: 54ch">
+            The name reflects the character: intense, passionate, and burning — but controlled.
+            Every decision is deliberate. Every element earns its place.
+          </p>
+
+          <aside class="sidenote">
+            <span class="id">M-00 · framing</span>
+            This document is itself an Ardent artifact. Hairlines, mono metadata, harsh contrast,
+            document container. Where it bends the rules (full-bleed type specimens, color grids),
+            the purpose is to <em>show</em> the system, not to use it.
+          </aside>
+        </section>
+
+        <!-- ============================================================
+         §01 — THE EIGHT TENETS
+         ============================================================ -->
+        <section id="tenets" class="section lane" data-screen-label="01 Tenets">
+          <header class="section-head">
+            <span class="num">§01</span>
+            <span class="rule"></span>
+            <span class="meta">TENETS · 8</span>
+          </header>
+
+          <h2 class="section-title">The eight tenets.</h2>
+          <p class="section-lede">
+            Operating principles. Apply them in order when forces conflict — intentionality before
+            transparency, transparency before timelessness, and so on. They are not aesthetic
+            preferences; they are decision rules.
+          </p>
+
+          <ol class="tenets">
+            <li class="tenet">
+              <span class="num">01</span>
+              <h3>Intentionality over style</h3>
+              <p>
+                Every decision requires a reason. Aesthetic choices are functional responses to
+                context. If you cannot articulate why an element exists, reconsider it.
+              </p>
+            </li>
+            <li class="tenet">
+              <span class="num">02</span>
+              <h3>Transparency</h3>
+              <p>
+                Expose state. Show the system. Don't hide the machine. Revealing inner workings
+                builds trust and enables mastery.
+              </p>
+            </li>
+            <li class="tenet">
+              <span class="num">03</span>
+              <h3>Timelessness</h3>
+              <p>
+                Ignore trends. Design for permanence. If it would look wrong printed in 1978 or
+                displayed in 2045, reconsider it.
+              </p>
+            </li>
+            <li class="tenet">
+              <span class="num">04</span>
+              <h3>Precision</h3>
+              <p>
+                Engineered, not decorated. Every element should feel <em>built</em>—considered,
+                calibrated, placed. The aesthetic of control panels and datasheets.
+              </p>
+            </li>
+            <li class="tenet">
+              <span class="num">05</span>
+              <h3>Functional density</h3>
+              <p>
+                As complex as it needs to be. No more, no less. Information is not the enemy.
+                Whitespace is structural; emptiness for its own sake is waste.
+              </p>
+            </li>
+            <li class="tenet">
+              <span class="num">06</span>
+              <h3>Warmth through craft</h3>
+              <p>
+                The human is visible in details. Precision is not cold. Care in typography, spacing,
+                alignment—that is where warmth lives, not in whimsy.
+              </p>
+            </li>
+            <li class="tenet">
+              <span class="num">07</span>
+              <h3>Performance is design</h3>
+              <p>
+                Fast, lightweight, no bloat. The experience of speed is part of the aesthetic. A
+                slow interface cannot be beautiful.
+              </p>
+            </li>
+            <li class="tenet">
+              <span class="num">08</span>
+              <h3>Respect for users</h3>
+              <p>
+                Don't infantilize. Users are capable adults. Be direct, clear, and explicit. Avoid
+                soft language and false confirmation.
+              </p>
+            </li>
+          </ol>
+
+          <aside class="sidenote">
+            <span class="id">M-01 · resolved 0.1.3</span>
+            Resolved — the order is now codified as
+            <code>philosophy.tenetOrder</code> in <code>tokens.json</code>. When tenets conflict,
+            intentionality trumps everything; respect-for-users is the floor.
+          </aside>
+        </section>
+
+        <!-- ============================================================
+         §02 — INFLUENCES
+         ============================================================ -->
+        <section id="influences" class="section lane" data-screen-label="02 Influences">
+          <header class="section-head">
+            <span class="num">§02</span>
+            <span class="rule"></span>
+            <span class="meta">INFLUENCES · 3 SOURCES</span>
+          </header>
+
+          <h2 class="section-title">Influences — 50 / 30 / 20.</h2>
+          <p class="section-lede">
+            Ardent synthesizes three sources in approximate proportion. Aesthetic from the first,
+            architecture from the second, humanity from the third.
+          </p>
+
+          <div class="influence-bar" aria-hidden="true">
+            <div class="a">
+              <span class="nm">U.S. Graphics Co.</span>
+              <span class="pct">50%</span>
+            </div>
+            <div class="b">
+              <span class="nm">IBM Carbon</span>
+              <span class="pct">30%</span>
+            </div>
+            <div class="c">
+              <span class="nm">Recursive / brutalism</span>
+              <span class="pct">20%</span>
+            </div>
+          </div>
+
+          <div class="influence-grid">
+            <div class="influence-card">
+              <h4>U.S. Graphics Co.</h4>
+              <div class="role">50% · dominant aesthetic</div>
+              <p>
+                The golden era of computing. Control panels, machine-readable typefaces, terminal
+                interfaces, technical documentation. Where the look comes from.
+              </p>
+              <ul class="attrs">
+                <li>Monospace for system text</li>
+                <li>Hairline borders, ruled dividers</li>
+                <li>Harsh contrast (near-black on off-white)</li>
+                <li>Flat, non-hierarchical surfaces</li>
+                <li>Color as semantic, never decoration</li>
+                <li>Dense information display</li>
+              </ul>
+            </div>
+            <div class="influence-card">
+              <h4>IBM Carbon</h4>
+              <div class="role">30% · architecture</div>
+              <p>
+                Where USG is an aesthetic, Carbon is an architecture. The systematic rigor
+                underneath the surface vocabulary.
+              </p>
+              <ul class="attrs">
+                <li>Consistent spacing scale</li>
+                <li>Modular, composable components</li>
+                <li>Accessibility standards</li>
+                <li>Primitives → semantics → components</li>
+                <li>Professional doc practices</li>
+              </ul>
+            </div>
+            <div class="influence-card">
+              <h4>Recursive / brutalism</h4>
+              <div class="role">20% · warmth</div>
+              <p>
+                Warmth within structure. Recursive's variable axes show that systematic design can
+                still breathe. The soft end of brutalism.
+              </p>
+              <ul class="attrs">
+                <li>Humanity within monospace</li>
+                <li>Playfulness without sacrifice of function</li>
+                <li>Ready for work, ready for play</li>
+                <li>Structural but approachable</li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="sidenote">
+            <span class="id">M-02 · resolved 0.1.3</span>
+            Resolved by restating the influence as <em>philosophical</em>: Recursive's lesson is
+            warmth-within-structure, not a typeface substitution. The sans stack stays Inter →
+            Helvetica Neue → Arial.
+          </aside>
+        </section>
+
+        <!-- ============================================================
+         §03 — TYPOGRAPHY
+         ============================================================ -->
+        <section id="typography" class="section" data-screen-label="03 Typography">
+          <div class="lane">
+            <header class="section-head">
+              <span class="num">§03</span>
+              <span class="rule"></span>
+              <span class="meta">TYPOGRAPHY · 3 FAMILIES · 13 ROLES</span>
+            </header>
+
+            <h2 class="section-title">Three families, three jobs.</h2>
+            <p class="section-lede">
+              Each family is assigned a strict semantic role. Sans is structure. Serif is reading.
+              Mono is signal. They never trade places.
+            </p>
+          </div>
+
+          <!-- SANS specimen -->
+          <div class="spec-glyph">
+            <dl class="spec-meta">
+              <div>
+                <dt>Family</dt>
+                <dd>Inter (var)</dd>
+              </div>
+              <div>
+                <dt>Role</dt>
+                <dd>Headings · UI</dd>
+              </div>
+              <div>
+                <dt>Fallback</dt>
+                <dd>Helvetica Neue · Arial</dd>
+              </div>
+              <div>
+                <dt>Designer</dt>
+                <dd>R. Sharp · 2016</dd>
+              </div>
+            </dl>
+
+            <div class="glyph-row sans">
+              <span class="a">A</span>
+              <span class="a">a</span>
+              <span class="num">01</span>
+              <span class="a">G</span>
+              <span class="a">g</span>
+            </div>
+
+            <p class="specimen-pangram sans" style="font-weight: 600">
+              Engineered, not decorated. Hierarchy through weight and scale.
+            </p>
+
+            <div class="specimen-set">
+              <div class="row">
+                <span class="l">DisplayLg · 8xl</span>
+                <span class="v t-display">Ardent</span>
+                <span class="v">700 · 1.00 · −0.05em</span>
+              </div>
+              <div class="row">
+                <span class="l">Display · 6xl</span>
+                <span class="v t-display">Ardent Design 0.1</span>
+                <span class="v">700 · 1.10 · −0.025em</span>
+              </div>
+              <div class="row">
+                <span class="l">H1 · 4xl</span>
+                <span class="v t-h1">Section heading</span>
+                <span class="v">700 · 1.10 · −0.025em</span>
+              </div>
+              <div class="row">
+                <span class="l">H2 · 2xl</span>
+                <span class="v t-h2">Subsection heading</span>
+                <span class="v">700 · 1.25 · 0</span>
+              </div>
+              <div class="row">
+                <span class="l">H3 · xl</span>
+                <span class="v t-h3">Group heading</span>
+                <span class="v">700 · 1.25 · 0</span>
+              </div>
+              <div class="row">
+                <span class="l">H4 · lg</span>
+                <span class="v t-h4">Inline heading</span>
+                <span class="v">700 · 1.40 · 0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SERIF specimen -->
+          <div class="spec-glyph" style="background: var(--gray-50)">
+            <dl class="spec-meta">
+              <div>
+                <dt>Family</dt>
+                <dd>Old Standard TT</dd>
+              </div>
+              <div>
+                <dt>Role</dt>
+                <dd>Body · Reading</dd>
+              </div>
+              <div>
+                <dt>Fallback</dt>
+                <dd>Source Serif · Domine</dd>
+              </div>
+              <div>
+                <dt>Voice</dt>
+                <dd>Editorial · Technical</dd>
+              </div>
+            </dl>
+
+            <div class="glyph-row serif">
+              <span class="a">A</span>
+              <span class="a">a</span>
+              <span class="num">02</span>
+              <span class="a">G</span>
+              <span class="a">g</span>
+            </div>
+
+            <p class="specimen-pangram serif" style="max-width: 32ch">
+              The serif body provides a timeless, editorial quality — like reading a Bell Labs
+              technical paper.
+            </p>
+
+            <div class="specimen-set">
+              <div class="row">
+                <span class="l">Body · base</span>
+                <span class="v t-body">A tight 1.4 line-height for dense, compact reading.</span>
+                <span class="v">400 · 1.40</span>
+              </div>
+              <div class="row">
+                <span class="l">BodyLarge · lg</span>
+                <span
+                  class="v"
+                  style="font-family: var(--font-serif); font-size: 1.125rem; line-height: 1.5"
+                  >For ledes, opening paragraphs, and quiet moments that ask to breathe.</span
+                >
+                <span class="v">400 · 1.50</span>
+              </div>
+              <div class="row">
+                <span class="l">BodySmall · sm</span>
+                <span class="v t-bodySm">The system signals weight by virtue of being serif.</span>
+                <span class="v">400 · 1.40</span>
+              </div>
+              <div class="row">
+                <span class="l">Italic</span>
+                <span class="v t-body" style="font-style: italic"
+                  >For citations, titles, and emphasis — nothing else.</span
+                >
+                <span class="v">400 · italic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- MONO specimen -->
+          <div class="spec-glyph" style="background: var(--black); color: var(--white)">
+            <dl class="spec-meta" style="color: var(--gray-400)">
+              <div>
+                <dt style="color: var(--gray-600)">Family</dt>
+                <dd style="color: var(--white)">IBM Plex Mono</dd>
+              </div>
+              <div>
+                <dt style="color: var(--gray-600)">Role</dt>
+                <dd style="color: var(--white)">Labels · Metadata</dd>
+              </div>
+              <div>
+                <dt style="color: var(--gray-600)">Fallback</dt>
+                <dd style="color: var(--white)">Geist Mono · Fira Code</dd>
+              </div>
+              <div>
+                <dt style="color: var(--gray-600)">Signal</dt>
+                <dd style="color: var(--white)">"This is system text"</dd>
+              </div>
+            </dl>
+
+            <div class="glyph-row mono" style="font-weight: 500">
+              <span class="a">A</span>
+              <span class="a">a</span>
+              <span class="num">03</span>
+              <span class="a">G</span>
+              <span class="a">g</span>
+            </div>
+
+            <p
+              class="specimen-pangram mono"
+              style="font-size: clamp(16px, 2.4vw, 22px); letter-spacing: 0.02em"
+            >
+              MACHINE-READABLE · CONTROL-PANEL · DATASHEET<br />
+              <span style="color: var(--gray-400)"
+                >// distinguishes functional text from content</span
+              >
+            </p>
+
+            <div class="specimen-set" style="border-top-color: var(--gray-800)">
+              <div class="row">
+                <span class="l" style="color: var(--gray-500)">Label · xs</span>
+                <span class="v t-label" style="color: var(--white)">SECTION DIVIDER</span>
+                <span class="v" style="color: var(--gray-500)">500 · 0.05em</span>
+              </div>
+              <div class="row">
+                <span class="l" style="color: var(--gray-500)">Code · sm</span>
+                <span class="v t-code" style="color: var(--white)"
+                  >const accent = emerald[400];</span
+                >
+                <span class="v" style="color: var(--gray-500)">400 · 0</span>
+              </div>
+              <div class="row">
+                <span class="l" style="color: var(--gray-500)">Caption · xs</span>
+                <span class="v t-caption" style="color: var(--gray-300)"
+                  >Figure 3.1 — type specimens, 1:1 scale</span
+                >
+                <span class="v" style="color: var(--gray-500)">400 · 0.025em</span>
+              </div>
+              <div class="row">
+                <span class="l" style="color: var(--gray-500)">Metadata · xs</span>
+                <span class="v t-metadata" style="color: var(--gray-300)"
+                  >2026-05-20T09:14:32Z · build 0.1.1</span
+                >
+                <span class="v" style="color: var(--gray-500)">400 · 1.20</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Token table -->
+          <div class="lane" style="padding-top: 32px">
+            <div class="label-row strong">
+              <span class="label">Typography tokens · semantic</span>
+            </div>
+            <table class="spec">
+              <thead>
+                <tr>
+                  <th>Role</th>
+                  <th>Family</th>
+                  <th>Size</th>
+                  <th>Weight</th>
+                  <th>Line height</th>
+                  <th>Letter spacing</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="token">displayLg</td>
+                  <td>sans</td>
+                  <td>8xl · 6rem</td>
+                  <td>700</td>
+                  <td>1.00</td>
+                  <td>−0.05em</td>
+                </tr>
+                <tr>
+                  <td class="token">display</td>
+                  <td>sans</td>
+                  <td>6xl · 3.75rem</td>
+                  <td>700</td>
+                  <td>1.10</td>
+                  <td>−0.025em</td>
+                </tr>
+                <tr>
+                  <td class="token">heading1</td>
+                  <td>sans</td>
+                  <td>4xl · 2.25rem</td>
+                  <td>700</td>
+                  <td>1.10</td>
+                  <td>−0.025em</td>
+                </tr>
+                <tr>
+                  <td class="token">heading2</td>
+                  <td>sans</td>
+                  <td>2xl · 1.5rem</td>
+                  <td>700</td>
+                  <td>1.25</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="token">heading3</td>
+                  <td>sans</td>
+                  <td>xl · 1.25rem</td>
+                  <td>700</td>
+                  <td>1.25</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="token">heading4</td>
+                  <td>sans</td>
+                  <td>lg · 1.125rem</td>
+                  <td>700</td>
+                  <td>1.40</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="token">body</td>
+                  <td>serif</td>
+                  <td>base · 1rem</td>
+                  <td>400</td>
+                  <td>1.40</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="token">bodyLarge</td>
+                  <td>serif</td>
+                  <td>lg · 1.125rem</td>
+                  <td>400</td>
+                  <td>1.50</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="token">bodySmall</td>
+                  <td>serif</td>
+                  <td>sm · 0.875rem</td>
+                  <td>400</td>
+                  <td>1.40</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="token">label</td>
+                  <td>mono</td>
+                  <td>xs · 0.75rem</td>
+                  <td>500</td>
+                  <td>1.40</td>
+                  <td>0.05em</td>
+                </tr>
+                <tr>
+                  <td class="token">code</td>
+                  <td>mono</td>
+                  <td>sm · 0.875rem</td>
+                  <td>400</td>
+                  <td>1.40</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="token">caption</td>
+                  <td>mono</td>
+                  <td>xs · 0.75rem</td>
+                  <td>400</td>
+                  <td>1.40</td>
+                  <td>0.025em</td>
+                </tr>
+                <tr>
+                  <td class="token">metadata</td>
+                  <td>mono</td>
+                  <td>xs · 0.75rem</td>
+                  <td>400</td>
+                  <td>1.20</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <aside class="sidenote">
+              <span class="id">M-03 · resolved 0.1.2</span>
+              Resolved — added <code>fontSize.6xl/7xl/8xl/9xl</code> for cover-grade type, and split
+              <code>display</code> into <code>display</code> + <code>displayLg</code> so it no
+              longer shares the body scale.
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================
+         §04 — COLOR
+         ============================================================ -->
+        <section id="color" class="section" data-screen-label="04 Color">
+          <div class="lane">
+            <header class="section-head">
+              <span class="num">§04</span>
+              <span class="rule"></span>
+              <span class="meta">COLOR · 5 SCALES · 4 SEMANTIC</span>
+            </header>
+
+            <h2 class="section-title">Color is semantic.</h2>
+            <p class="section-lede">
+              Harsh black, harsh white. Four accents: emerald for go, red for stop, ocean for
+              inform, goldenrod for caution. Each carries a full 50–900 scale; the 500 step is the
+              primary signal unless otherwise stated.
+            </p>
+
+            <div class="label-row strong"><span class="label">Neutral — gray</span></div>
+          </div>
+
+          <div class="scale">
+            <div class="head">
+              <span class="nm">Gray</span>
+              <span class="desc">Surfaces · text · borders</span>
+            </div>
+            <div class="swatches">
+              <div class="sw" style="background: var(--gray-50); color: var(--black)">
+                <span class="w">50</span><span class="h">#FAFAFA</span>
+              </div>
+              <div class="sw" style="background: var(--gray-100); color: var(--black)">
+                <span class="w">100</span><span class="h">#F5F5F5</span>
+              </div>
+              <div class="sw" style="background: var(--gray-200); color: var(--black)">
+                <span class="w">200</span><span class="h">#E5E5E5</span>
+              </div>
+              <div class="sw" style="background: var(--gray-300); color: var(--black)">
+                <span class="w">300</span><span class="h">#D4D4D4</span>
+              </div>
+              <div class="sw" style="background: var(--gray-400); color: var(--black)">
+                <span class="w">400</span><span class="h">#A3A3A3</span>
+              </div>
+              <div class="sw" style="background: var(--gray-500); color: var(--white)">
+                <span class="w">500</span><span class="h">#737373</span>
+              </div>
+              <div class="sw" style="background: var(--gray-600); color: var(--white)">
+                <span class="w">600</span><span class="h">#525252</span>
+              </div>
+              <div class="sw" style="background: var(--gray-700); color: var(--white)">
+                <span class="w">700</span><span class="h">#404040</span>
+              </div>
+              <div class="sw" style="background: var(--gray-800); color: var(--white)">
+                <span class="w">800</span><span class="h">#262626</span>
+              </div>
+              <div class="sw" style="background: var(--gray-900); color: var(--white)">
+                <span class="w">900 / 950</span><span class="h">#0A0A0A</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lane" style="padding-top: 32px; padding-bottom: 8px">
+            <div class="label-row strong"><span class="label">Accents</span></div>
+          </div>
+
+          <!-- EMERALD -->
+          <div class="scale">
+            <div class="head">
+              <span class="nm">Emerald</span>
+              <span class="desc">Success · confirm<br />positive actions</span>
+            </div>
+            <div class="swatches">
+              <div class="sw" style="background: var(--emerald-50); color: var(--black)">
+                <span class="w">50</span><span class="h">#E6F6EC</span>
+              </div>
+              <div class="sw" style="background: var(--emerald-100); color: var(--black)">
+                <span class="w">100</span><span class="h">#C3E9D2</span>
+              </div>
+              <div class="sw" style="background: var(--emerald-200); color: var(--black)">
+                <span class="w">200</span><span class="h">#8FD5AC</span>
+              </div>
+              <div class="sw" style="background: var(--emerald-300); color: var(--black)">
+                <span class="w">300</span><span class="h">#58C084</span>
+              </div>
+              <div class="sw primary" style="background: var(--emerald-400); color: var(--black)">
+                <span class="w">400</span><span class="h">#26AB62</span>
+              </div>
+              <div class="sw" style="background: var(--emerald-500); color: var(--white)">
+                <span class="w">500</span><span class="h">#009148</span>
+              </div>
+              <div class="sw" style="background: var(--emerald-600); color: var(--white)">
+                <span class="w">600</span><span class="h">#007038</span>
+              </div>
+              <div class="sw" style="background: var(--emerald-700); color: var(--white)">
+                <span class="w">700</span><span class="h">#00562B</span>
+              </div>
+              <div class="sw" style="background: var(--emerald-800); color: var(--white)">
+                <span class="w">800</span><span class="h">#003F20</span>
+              </div>
+              <div class="sw" style="background: var(--emerald-900); color: var(--white)">
+                <span class="w">900</span><span class="h">#002915</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- GOLDENROD -->
+          <div class="scale">
+            <div class="head">
+              <span class="nm">Goldenrod</span>
+              <span class="desc">Warning · caution<br />attention required</span>
+            </div>
+            <div class="swatches">
+              <div class="sw" style="background: var(--goldenrod-50); color: var(--black)">
+                <span class="w">50</span><span class="h">#FFFAEB</span>
+              </div>
+              <div class="sw" style="background: var(--goldenrod-100); color: var(--black)">
+                <span class="w">100</span><span class="h">#FFF0C2</span>
+              </div>
+              <div class="sw" style="background: var(--goldenrod-200); color: var(--black)">
+                <span class="w">200</span><span class="h">#FFE285</span>
+              </div>
+              <div class="sw" style="background: var(--goldenrod-300); color: var(--black)">
+                <span class="w">300</span><span class="h">#FFD147</span>
+              </div>
+              <div class="sw" style="background: var(--goldenrod-400); color: var(--black)">
+                <span class="w">400</span><span class="h">#FFC01F</span>
+              </div>
+              <div class="sw primary" style="background: var(--goldenrod-500); color: var(--black)">
+                <span class="w">500</span><span class="h">#FDB515</span>
+              </div>
+              <div class="sw" style="background: var(--goldenrod-600); color: var(--white)">
+                <span class="w">600</span><span class="h">#C78D0A</span>
+              </div>
+              <div class="sw" style="background: var(--goldenrod-700); color: var(--white)">
+                <span class="w">700</span><span class="h">#946805</span>
+              </div>
+              <div class="sw" style="background: var(--goldenrod-800); color: var(--white)">
+                <span class="w">800</span><span class="h">#634503</span>
+              </div>
+              <div class="sw" style="background: var(--goldenrod-900); color: var(--white)">
+                <span class="w">900</span><span class="h">#332301</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- OCEAN -->
+          <div class="scale">
+            <div class="head">
+              <span class="nm">Ocean</span>
+              <span class="desc">Link · informational<br />secondary actions</span>
+            </div>
+            <div class="swatches">
+              <div class="sw" style="background: var(--ocean-50); color: var(--black)">
+                <span class="w">50</span><span class="h">#E0F2F7</span>
+              </div>
+              <div class="sw" style="background: var(--ocean-100); color: var(--black)">
+                <span class="w">100</span><span class="h">#B3DFF0</span>
+              </div>
+              <div class="sw" style="background: var(--ocean-200); color: var(--black)">
+                <span class="w">200</span><span class="h">#80C2E8</span>
+              </div>
+              <div class="sw" style="background: var(--ocean-300); color: var(--black)">
+                <span class="w">300</span><span class="h">#4DA1DE</span>
+              </div>
+              <div class="sw" style="background: var(--ocean-400); color: var(--white)">
+                <span class="w">400</span><span class="h">#2680D0</span>
+              </div>
+              <div class="sw primary" style="background: var(--ocean-500); color: var(--white)">
+                <span class="w">500</span><span class="h">#0060BF</span>
+              </div>
+              <div class="sw" style="background: var(--ocean-600); color: var(--white)">
+                <span class="w">600</span><span class="h">#004A94</span>
+              </div>
+              <div class="sw" style="background: var(--ocean-700); color: var(--white)">
+                <span class="w">700</span><span class="h">#00366E</span>
+              </div>
+              <div class="sw" style="background: var(--ocean-800); color: var(--white)">
+                <span class="w">800</span><span class="h">#002447</span>
+              </div>
+              <div class="sw" style="background: var(--ocean-900); color: var(--white)">
+                <span class="w">900</span><span class="h">#001224</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RED -->
+          <div class="scale">
+            <div class="head">
+              <span class="nm">Red</span>
+              <span class="desc">Error · destructive<br />critical alerts</span>
+            </div>
+            <div class="swatches">
+              <div class="sw" style="background: var(--red-50); color: var(--black)">
+                <span class="w">50</span><span class="h">#FEF2F2</span>
+              </div>
+              <div class="sw" style="background: var(--red-100); color: var(--black)">
+                <span class="w">100</span><span class="h">#FEE2E2</span>
+              </div>
+              <div class="sw" style="background: var(--red-200); color: var(--black)">
+                <span class="w">200</span><span class="h">#FECACA</span>
+              </div>
+              <div class="sw" style="background: var(--red-300); color: var(--black)">
+                <span class="w">300</span><span class="h">#FCA5A5</span>
+              </div>
+              <div class="sw" style="background: var(--red-400); color: var(--black)">
+                <span class="w">400</span><span class="h">#F87171</span>
+              </div>
+              <div class="sw primary" style="background: var(--red-500); color: var(--white)">
+                <span class="w">500</span><span class="h">#DC2626</span>
+              </div>
+              <div class="sw" style="background: var(--red-600); color: var(--white)">
+                <span class="w">600</span><span class="h">#B91C1C</span>
+              </div>
+              <div class="sw" style="background: var(--red-700); color: var(--white)">
+                <span class="w">700</span><span class="h">#991B1B</span>
+              </div>
+              <div class="sw" style="background: var(--red-800); color: var(--white)">
+                <span class="w">800</span><span class="h">#7F1D1D</span>
+              </div>
+              <div class="sw" style="background: var(--red-900); color: var(--white)">
+                <span class="w">900</span><span class="h">#450A0A</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lane" style="padding-top: 24px">
+            <aside class="sidenote">
+              <span class="id">M-04 · resolved 0.1.2</span>
+              Resolved — <code>amber.500</code> removed. Four accents only (emerald · goldenrod ·
+              ocean · red). If a fifth is ever needed it ships as a full scale with a defined role.
+            </aside>
+          </div>
+
+          <!-- LIGHT / DARK THEME PAIR -->
+          <div class="lane" style="padding-top: 32px">
+            <div class="label-row strong"><span class="label">Theme — light / dark</span></div>
+          </div>
+          <div class="theme-grid">
+            <div class="theme-card light">
+              <div class="label" style="margin-bottom: 8px">LIGHT MODE</div>
+              <h3 class="t-h2" style="letter-spacing: -0.02em; margin-bottom: 8px">
+                A workbench, lit.
+              </h3>
+              <p class="t-body" style="max-width: 38ch">
+                White surface, black ink. Borders and dividers carry the structure. Accents are
+                reserved for state.
+              </p>
+              <div class="swatch-stack">
+                <div class="row">
+                  <span class="sw" style="background: var(--white)"></span><span>bg.primary</span
+                  ><span class="muted">#FFFFFF</span>
+                </div>
+                <div class="row">
+                  <span class="sw" style="background: var(--gray-50)"></span
+                  ><span>bg.secondary</span><span class="muted">gray.50</span>
+                </div>
+                <div class="row">
+                  <span class="sw" style="background: var(--gray-100)"></span
+                  ><span>bg.tertiary</span><span class="muted">gray.100</span>
+                </div>
+                <div class="row">
+                  <span class="sw" style="background: var(--black)"></span><span>text.primary</span
+                  ><span class="muted">#000000</span>
+                </div>
+                <div class="row">
+                  <span class="sw" style="background: var(--gray-600)"></span
+                  ><span>text.secondary</span><span class="muted">gray.600</span>
+                </div>
+                <div class="row">
+                  <span class="sw" style="background: var(--ocean-600)"></span><span>text.link</span
+                  ><span class="muted">ocean.600</span>
+                </div>
+              </div>
+            </div>
+            <div class="theme-card dark">
+              <div class="label" style="margin-bottom: 8px; color: var(--gray-400)">DARK MODE</div>
+              <h3 class="t-h2" style="letter-spacing: -0.02em; margin-bottom: 8px">
+                A workbench, after hours.
+              </h3>
+              <p class="t-body" style="max-width: 38ch; color: var(--gray-300)">
+                Black surface, white ink. The same architecture, inverted. Accents brighten one step
+                (400) for legibility.
+              </p>
+              <div class="swatch-stack">
+                <div class="row">
+                  <span
+                    class="sw"
+                    style="background: var(--black); border-color: var(--gray-600)"
+                  ></span
+                  ><span>bg.primary</span><span class="dim">#000000</span>
+                </div>
+                <div class="row">
+                  <span
+                    class="sw"
+                    style="background: var(--gray-950); border-color: var(--gray-600)"
+                  ></span
+                  ><span>bg.secondary</span><span class="dim">gray.950</span>
+                </div>
+                <div class="row">
+                  <span
+                    class="sw"
+                    style="background: var(--gray-900); border-color: var(--gray-600)"
+                  ></span
+                  ><span>bg.tertiary</span><span class="dim">gray.900</span>
+                </div>
+                <div class="row">
+                  <span class="sw" style="background: var(--white)"></span><span>text.primary</span
+                  ><span class="dim">#FFFFFF</span>
+                </div>
+                <div class="row">
+                  <span class="sw" style="background: var(--gray-400)"></span
+                  ><span>text.secondary</span><span class="dim">gray.400</span>
+                </div>
+                <div class="row">
+                  <span class="sw" style="background: var(--ocean-400)"></span><span>text.link</span
+                  ><span class="dim">ocean.400</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SEMANTIC TABLE -->
+          <div class="lane" style="padding-top: 32px">
+            <div class="label-row strong">
+              <span class="label">Semantic mappings · light mode</span>
+            </div>
+            <div class="semantic-grid">
+              <div class="semantic-row head">
+                <span></span><span>Token</span><span>References</span><span>Usage</span>
+              </div>
+
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--white)"></span><span>bg.primary</span
+                ><span class="ref">white</span><span class="use">Page surface (harsh)</span>
+              </div>
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--gray-50)"></span><span>bg.secondary</span
+                ><span class="ref">gray.50</span><span class="use">Card / panel background</span>
+              </div>
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--gray-100)"></span><span>bg.tertiary</span
+                ><span class="ref">gray.100</span
+                ><span class="use">Hover, subtle fills, page surround</span>
+              </div>
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--black)"></span><span>bg.inverse</span
+                ><span class="ref">black</span
+                ><span class="use">Inverted surfaces, modals, terminals</span>
+              </div>
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--emerald-500)"></span><span>bg.accent</span
+                ><span class="ref">emerald.500</span
+                ><span class="use">Success states, confirmations</span>
+              </div>
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--goldenrod-50)"></span
+                ><span>bg.warning</span><span class="ref">goldenrod.50</span
+                ><span class="use">Warning backgrounds, this note</span>
+              </div>
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--ocean-50)"></span><span>bg.info</span
+                ><span class="ref">ocean.50</span><span class="use">Informational callouts</span>
+              </div>
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--red-50)"></span><span>bg.error</span
+                ><span class="ref">red.50</span><span class="use">Error containers</span>
+              </div>
+
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--black)"></span><span>text.primary</span
+                ><span class="ref">black</span><span class="use">Body, headings, primary ink</span>
+              </div>
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--gray-600)"></span
+                ><span>text.secondary</span><span class="ref">gray.600</span
+                ><span class="use">Labels, metadata, captions</span>
+              </div>
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--gray-400)"></span><span>text.muted</span
+                ><span class="ref">gray.400</span
+                ><span class="use">Disabled, placeholder, hint</span>
+              </div>
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--ocean-600)"></span><span>text.link</span
+                ><span class="ref">ocean.600</span
+                ><span class="use">Hyperlinks, link-styled actions</span>
+              </div>
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--emerald-600)"></span
+                ><span>text.accent</span><span class="ref">emerald.600</span
+                ><span class="use">Success text on light bg</span>
+              </div>
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--goldenrod-700)"></span
+                ><span>text.warning</span><span class="ref">goldenrod.700</span
+                ><span class="use">Warning text on light bg</span>
+              </div>
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--red-600)"></span><span>text.error</span
+                ><span class="ref">red.600</span><span class="use">Error text on light bg</span>
+              </div>
+
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--black)"></span><span>border.default</span
+                ><span class="ref">black</span><span class="use">Standard borders (harsh)</span>
+              </div>
+              <div class="semantic-row">
+                <span class="sw" style="background: var(--gray-200)"></span><span>border.muted</span
+                ><span class="ref">gray.200</span
+                ><span class="use">Subtle dividers, row separators</span>
+              </div>
+            </div>
+
+            <aside class="sidenote">
+              <span class="id">M-05 · resolved 0.1.3</span>
+              Resolved — semantic border tokens are now composite (<code>{color, width}</code>).
+              <code>border.default</code> = 1px black, <code>border.strong</code> = 2px black,
+              <code>border.muted</code> = 1px gray.200. Width and color are bound; consumers pick
+              one name.
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================
+         §05 — SPACING
+         ============================================================ -->
+        <section id="spacing" class="section lane" data-screen-label="05 Spacing">
+          <header class="section-head">
+            <span class="num">§05</span>
+            <span class="rule"></span>
+            <span class="meta">SPACING · 4PX BASE · 20 STEPS · MONOTONIC</span>
+          </header>
+
+          <h2 class="section-title">Tight, consistent rhythm.</h2>
+          <p class="section-lede">
+            4px base. Biased toward compact layouts. Whitespace is structural — it creates rhythm
+            and hierarchy — but emptiness for its own sake is waste.
+          </p>
+
+          <div class="space-stack">
+            <div class="space-row">
+              <span class="tok">space.1</span><span class="val">4 px · 0.25rem</span>
+              <span class="bar" style="width: 4px"></span>
+            </div>
+            <div class="space-row">
+              <span class="tok">space.2</span><span class="val">8 px · 0.5rem</span>
+              <span class="bar" style="width: 8px"></span>
+            </div>
+            <div class="space-row">
+              <span class="tok">space.3</span><span class="val">12 px · 0.75rem</span>
+              <span class="bar" style="width: 12px"></span>
+            </div>
+            <div class="space-row">
+              <span class="tok">space.4</span><span class="val">16 px · 1rem</span>
+              <span class="bar" style="width: 16px"></span>
+            </div>
+            <div class="space-row">
+              <span class="tok">space.5</span><span class="val">20 px · 1.25rem</span>
+              <span class="bar" style="width: 20px"></span>
+            </div>
+            <div class="space-row">
+              <span class="tok">space.6</span><span class="val">24 px · 1.5rem</span>
+              <span class="bar" style="width: 24px"></span>
+            </div>
+            <div class="space-row">
+              <span class="tok">space.7</span><span class="val">28 px · 1.75rem</span>
+              <span class="bar" style="width: 28px"></span>
+            </div>
+            <div class="space-row">
+              <span class="tok">space.8</span><span class="val">32 px · 2rem</span>
+              <span class="bar" style="width: 32px"></span>
+            </div>
+            <div class="space-row">
+              <span class="tok">space.10</span><span class="val">40 px · 2.5rem</span>
+              <span class="bar" style="width: 40px"></span>
+            </div>
+            <div class="space-row">
+              <span class="tok">space.12</span><span class="val">48 px · 3rem</span>
+              <span class="bar" style="width: 48px"></span>
+            </div>
+            <div class="space-row">
+              <span class="tok">space.14</span><span class="val">56 px · 3.5rem</span>
+              <span class="bar" style="width: 56px"></span>
+            </div>
+            <div class="space-row">
+              <span class="tok">space.16</span><span class="val">64 px · 4rem</span>
+              <span class="bar" style="width: 64px"></span>
+            </div>
+            <div class="space-row">
+              <span class="tok">space.20</span><span class="val">80 px · 5rem</span>
+              <span class="bar" style="width: 80px"></span>
+            </div>
+            <div class="space-row">
+              <span class="tok">space.24</span><span class="val">96 px · 6rem</span>
+              <span class="bar" style="width: 96px"></span>
+            </div>
+          </div>
+
+          <aside class="sidenote">
+            <span class="id">M-06 · resolved 0.1.2</span>
+            Resolved — the primitives are rewritten so step number tracks size monotonically.
+            <code>space.4</code> is <code>1rem</code>, <code>space.7</code> is <code>1.75rem</code>,
+            <code>space.10</code> is <code>2.5rem</code>. No synonyms.
+          </aside>
+
+          <div class="label-row strong" style="margin-top: 32px">
+            <span class="label">Semantic spacing — in context</span>
+          </div>
+          <div class="semantic-space-grid">
+            <div>
+              <div>
+                <span class="tok">spacing.page.margin</span><span class="val">1.25rem</span>
+              </div>
+              <p class="ctx">Mobile body padding</p>
+            </div>
+            <div>
+              <div><span class="tok">spacing.page.marginLg</span><span class="val">3rem</span></div>
+              <p class="ctx">Desktop body padding</p>
+            </div>
+            <div>
+              <div>
+                <span class="tok">spacing.page.maxWidth</span><span class="val">42.375rem</span>
+              </div>
+              <p class="ctx">Reading container (678&nbsp;px)</p>
+            </div>
+            <div>
+              <div>
+                <span class="tok">spacing.page.maxWidthDoc</span><span class="val">47.5rem</span>
+              </div>
+              <p class="ctx">Spec-grade container (760&nbsp;px)</p>
+            </div>
+            <div>
+              <div><span class="tok">spacing.section.gap</span><span class="val">3.5rem</span></div>
+              <p class="ctx">Between major sections</p>
+            </div>
+            <div>
+              <div><span class="tok">spacing.section.gapSm</span><span class="val">2rem</span></div>
+              <p class="ctx">Between minor groups</p>
+            </div>
+            <div>
+              <div>
+                <span class="tok">spacing.card.padding</span><span class="val">1.25rem</span>
+              </div>
+              <p class="ctx">Card internal padding</p>
+            </div>
+            <div>
+              <div><span class="tok">spacing.card.gap</span><span class="val">0.75rem</span></div>
+              <p class="ctx">Stack inside cards</p>
+            </div>
+            <div>
+              <div>
+                <span class="tok">spacing.inline.gap</span><span class="val">0.375rem</span>
+              </div>
+              <p class="ctx">Chip / tag spacing</p>
+            </div>
+            <div>
+              <div>
+                <span class="tok">spacing.inline.gapLg</span><span class="val">0.75rem</span>
+              </div>
+              <p class="ctx">Toolbar / nav spacing</p>
+            </div>
+            <div>
+              <div>
+                <span class="tok">spacing.control.paddingX</span><span class="val">0.75rem</span>
+              </div>
+              <p class="ctx">Button / input horizontal</p>
+            </div>
+            <div>
+              <div>
+                <span class="tok">spacing.control.paddingY</span><span class="val">0.375rem</span>
+              </div>
+              <p class="ctx">Button / input vertical</p>
+            </div>
+          </div>
+
+          <div class="label-row strong" style="margin-top: 32px">
+            <span class="label">Borders, radius, motion &amp; focus</span>
+          </div>
+          <table class="spec" style="margin-top: 8px">
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Value</th>
+                <th>Used by</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="token">borderWidth.hairline</td>
+                <td>1 px</td>
+                <td>Cards · inputs · buttons · dividers</td>
+              </tr>
+              <tr>
+                <td class="token">borderWidth.default</td>
+                <td>2 px</td>
+                <td>Emphasized dividers · focus rings</td>
+              </tr>
+              <tr>
+                <td class="token">borderWidth.thick</td>
+                <td>4 px</td>
+                <td class="muted">Reserved — not currently consumed</td>
+              </tr>
+              <tr>
+                <td class="token">borderRadius.none</td>
+                <td>0</td>
+                <td><strong>The only radius.</strong> All components.</td>
+              </tr>
+              <tr>
+                <td class="token">motion.duration.*</td>
+                <td>0 ms</td>
+                <td>All transitions · "no animation" is the value</td>
+              </tr>
+              <tr>
+                <td class="token">motion.easing.*</td>
+                <td>linear</td>
+                <td>Pinned alongside duration</td>
+              </tr>
+              <tr>
+                <td class="token">focus.width</td>
+                <td>2 px</td>
+                <td>All focusable elements</td>
+              </tr>
+              <tr>
+                <td class="token">focus.offset</td>
+                <td>0.125 rem</td>
+                <td>Outline gap from element</td>
+              </tr>
+              <tr>
+                <td class="token">focus.color</td>
+                <td>black</td>
+                <td>Light mode · inverts to white in dark</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <aside class="sidenote">
+            <span class="id">M-07 · resolved 0.1.2</span>
+            Resolved — <code>borderRadius</code> is stripped to <code>none</code> only. The
+            temptation to reach for a rounded corner now requires editing a primitive, not just
+            picking from a menu.
+          </aside>
+        </section>
+
+        <!-- ============================================================
+         §06 — THE DOCUMENT CONTAINER
+         ============================================================ -->
+        <section id="container" class="section" data-screen-label="06 Container">
+          <div class="lane">
+            <header class="section-head">
+              <span class="num">§06</span>
+              <span class="rule"></span>
+              <span class="meta">CONTAINER · DEFAULT LAYOUT</span>
+            </header>
+
+            <h2 class="section-title">The document on a desk.</h2>
+            <p class="section-lede">
+              Unless otherwise specified, pages use a centered container: 678&nbsp;px white surface,
+              gray.100 surround, hairline borders top and bottom. Mobile flattens to full-bleed.
+              What you are reading right now is one.
+            </p>
+          </div>
+
+          <div
+            style="
+              background: var(--gray-100);
+              padding: 24px;
+              border-top: 1px solid var(--black);
+              border-bottom: 1px solid var(--black);
+            "
+          >
+            <div class="label" style="margin-bottom: 12px">DESKTOP — ≥ 640 PX</div>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                background: var(--gray-100);
+                padding: 24px 0;
+              "
+            >
+              <div
+                style="
+                  width: 100%;
+                  max-width: 340px;
+                  background: var(--white);
+                  border-top: 1px solid var(--black);
+                  border-bottom: 1px solid var(--black);
+                  padding: 16px 14px;
+                  font-family: var(--font-serif);
+                  font-size: 0.75rem;
+                  line-height: 1.4;
+                "
+              >
+                <div
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 0.5625rem;
+                    letter-spacing: 0.06em;
+                    text-transform: uppercase;
+                    color: var(--gray-500);
+                    border-bottom: 1px solid var(--gray-200);
+                    padding-bottom: 4px;
+                    margin-bottom: 8px;
+                  "
+                >
+                  SECTION · 01
+                </div>
+                <h4
+                  style="
+                    font-family: var(--font-sans);
+                    font-weight: 700;
+                    font-size: 0.875rem;
+                    margin-bottom: 6px;
+                    line-height: 1.2;
+                  "
+                >
+                  A centred document.
+                </h4>
+                <p style="margin-bottom: 6px">
+                  Max-width 678&nbsp;px. White surface inside a gray surround. The frame says "this
+                  is content," not chrome.
+                </p>
+                <p style="color: var(--gray-600); font-size: 0.6875rem">
+                  Hairline borders top and bottom. No shadow, no radius, no decoration.
+                </p>
+              </div>
+            </div>
+
+            <div class="label" style="margin: 24px 0 12px">MOBILE — &lt; 640 PX</div>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                background: var(--gray-100);
+                padding: 0;
+              "
+            >
+              <div
+                style="
+                  width: 220px;
+                  background: var(--white);
+                  border-top: 1px solid var(--black);
+                  border-bottom: 1px solid var(--black);
+                  padding: 16px 14px;
+                  font-family: var(--font-serif);
+                  font-size: 0.75rem;
+                  line-height: 1.4;
+                "
+              >
+                <div
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 0.5625rem;
+                    letter-spacing: 0.06em;
+                    text-transform: uppercase;
+                    color: var(--gray-500);
+                    border-bottom: 1px solid var(--gray-200);
+                    padding-bottom: 4px;
+                    margin-bottom: 8px;
+                  "
+                >
+                  SECTION · 01
+                </div>
+                <h4
+                  style="
+                    font-family: var(--font-sans);
+                    font-weight: 700;
+                    font-size: 0.875rem;
+                    margin-bottom: 6px;
+                    line-height: 1.2;
+                  "
+                >
+                  Full-bleed reading.
+                </h4>
+                <p style="margin-bottom: 6px">
+                  No max-width. No vertical padding. The screen <em>is</em> the page.
+                </p>
+                <p style="color: var(--gray-600); font-size: 0.6875rem">
+                  Same borders top &amp; bottom, full width.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lane" style="padding-top: 32px">
+            <div class="label-row strong"><span class="label">Implementation</span></div>
+            <pre
+              style="
+                font-family: var(--font-mono);
+                font-size: 0.75rem;
+                line-height: 1.55;
+                background: var(--gray-50);
+                border: 1px solid var(--gray-300);
+                padding: 16px;
+                overflow-x: auto;
+                color: var(--text-primary);
+                margin: 0;
+              "
+            ><span style="color:var(--ocean-600);">&lt;body</span> <span style="color:var(--emerald-700);">className</span>=<span style="color:var(--goldenrod-700);">"min-h-screen flex justify-center bg-gray-100 sm:py-6 md:py-9 lg:py-12"</span><span style="color:var(--ocean-600);">&gt;</span>
+  <span style="color:var(--ocean-600);">&lt;div</span> <span style="color:var(--emerald-700);">className</span>=<span style="color:var(--goldenrod-700);">"w-full max-w-[678px] min-h-full bg-white border-y border-gray-900"</span><span style="color:var(--ocean-600);">&gt;</span>
+    {children}
+  <span style="color:var(--ocean-600);">&lt;/div&gt;</span>
+<span style="color:var(--ocean-600);">&lt;/body&gt;</span></pre>
+
+            <aside class="sidenote">
+              <span class="id">M-08 · resolved 0.1.2</span>
+              Resolved — the spec-grade container is now formalized. Reading container is
+              <code>spacing.page.maxWidth</code>
+              (678&nbsp;px); reference documents may widen to
+              <code>spacing.page.maxWidthDoc</code> (760&nbsp;px). This page widens honestly.
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================
+         §07 — COMPONENTS
+         ============================================================ -->
+        <section id="components" class="section lane" data-screen-label="07 Components">
+          <header class="section-head">
+            <span class="num">§07</span>
+            <span class="rule"></span>
+            <span class="meta">COMPONENTS · 6 PRIMITIVES</span>
+          </header>
+
+          <h2 class="section-title">A small kit, used precisely.</h2>
+          <p class="section-lede">
+            The component surface is intentionally narrow. Each primitive does one thing.
+            Composition does the rest.
+          </p>
+
+          <!-- BUTTON -->
+          <div class="comp-row">
+            <div class="ttl">
+              <strong>Button</strong>
+              <p>Three variants. Hairline border, no radius, sans medium, uppercase tracking.</p>
+            </div>
+            <div class="body">
+              <div class="label" style="margin-bottom: 8px">
+                Primary — emerald.400 / emerald.500 on hover
+              </div>
+              <div class="btn-group" style="margin-bottom: 16px">
+                <button class="btn">Confirm action</button>
+                <button class="btn">Save</button>
+                <button class="btn">Deploy build</button>
+                <button class="btn" disabled="">Disabled</button>
+              </div>
+              <div class="label" style="margin-bottom: 8px">Secondary — goldenrod.500 outline</div>
+              <div class="btn-group" style="margin-bottom: 16px">
+                <button class="btn btn-secondary">Review changes</button>
+                <button class="btn btn-secondary">Edit</button>
+                <button class="btn btn-secondary">Configure</button>
+              </div>
+              <div class="label" style="margin-bottom: 8px">
+                Ghost — transparent / gray.100 on hover
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-ghost">Cancel</button>
+                <button class="btn btn-ghost">Back</button>
+                <button class="btn btn-ghost">Dismiss</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- LINK -->
+          <div class="comp-row">
+            <div class="ttl">
+              <strong>Link</strong>
+              <p>Ocean.600, underlined. Hover → gray.600. Arrow glyphs for direction.</p>
+            </div>
+            <div class="body link-line">
+              <ul class="link-list">
+                <li><a href="#">Inline link in body copy</a> within a sentence, like this.</li>
+                <li>
+                  <a href="#">Navigation link <span class="arrow">→</span></a>
+                </li>
+                <li>
+                  <a href="#">External resource <span class="arrow">↗</span></a>
+                </li>
+                <li>
+                  <a href="#">Back to index <span class="arrow">←</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div class="comp-row">
+            <div class="ttl">
+              <strong>Card</strong>
+              <p>
+                Hairline black border on gray.50. No shadow, no radius. Internal padding 1.25rem.
+              </p>
+            </div>
+            <div class="body">
+              <div style="display: grid; grid-template-columns: 1fr; gap: 0">
+                <div class="card-ex">
+                  <span class="label">SPEC · 04.A</span>
+                  <h4 class="ttl">Hairline-bordered card</h4>
+                  <p class="body">
+                    The flat surface treatment. Hierarchy comes from spacing, type weight, and the
+                    border itself — never from elevation.
+                  </p>
+                  <div class="meta"><span>UPDATED 2026.05.20</span><span>DRAFT</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- INPUT -->
+          <div class="comp-row">
+            <div class="ttl">
+              <strong>Input</strong>
+              <p>
+                Hairline gray.900 border, no radius. Sans-serif label above, padding 0.625rem ×
+                0.375rem.
+              </p>
+            </div>
+            <div class="body">
+              <div style="display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 380px">
+                <div class="field">
+                  <label for="ix-1">PROJECT NAME</label>
+                  <input id="ix-1" type="text" value="ardent" />
+                  <span class="hint">Lowercase, hyphen-separated.</span>
+                </div>
+                <div class="field">
+                  <label for="ix-2">RUNTIME</label>
+                  <select id="ix-2">
+                    <option>Node 22 · LTS</option>
+                    <option>Bun 1.2</option>
+                    <option>Deno 2</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="ix-3">DESCRIPTION</label>
+                  <input id="ix-3" type="text" placeholder="Optional — one line" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DIVIDER & LABEL -->
+          <div class="comp-row">
+            <div class="ttl">
+              <strong>Divider &amp; Label</strong>
+              <p>Section boundaries. Uppercase mono label, hairline rule. The system's tell.</p>
+            </div>
+            <div class="body">
+              <div>
+                <div class="label-row strong"><span class="label">REVISION HISTORY</span></div>
+                <p class="body" style="margin-bottom: 24px">
+                  Default labels pair an uppercase mono caption with a hairline black rule. Used at
+                  every section boundary.
+                </p>
+
+                <div class="label-row"><span class="label">RELATED ARTIFACTS</span></div>
+                <p class="body" style="margin-bottom: 24px">
+                  Use the muted variant (gray.300 rule) for secondary groupings.
+                </p>
+
+                <hr class="divider strong" style="margin: 16px 0" />
+                <p class="t-caption muted">
+                  Above: <code>&lt;hr class="divider strong"&gt;</code> — 2 px black
+                </p>
+                <hr class="divider muted" style="margin: 16px 0" />
+                <p class="t-caption muted">
+                  Above: <code>&lt;hr class="divider muted"&gt;</code> — 1 px gray.200
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TABLE -->
+          <div class="comp-row">
+            <div class="ttl">
+              <strong>Table</strong>
+              <p>
+                Mono throughout. Header is uppercase metadata, body is tabular-nums, hairline row
+                dividers.
+              </p>
+            </div>
+            <div class="body">
+              <table class="spec">
+                <thead>
+                  <tr>
+                    <th>Build</th>
+                    <th>Channel</th>
+                    <th>Status</th>
+                    <th class="num-col">Δ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="token">0.1.1</td>
+                    <td>stable</td>
+                    <td><span style="color: var(--emerald-600)">live</span></td>
+                    <td class="num-col">+12</td>
+                  </tr>
+                  <tr>
+                    <td class="token">0.1.0</td>
+                    <td>stable</td>
+                    <td><span class="muted">superseded</span></td>
+                    <td class="num-col">+98</td>
+                  </tr>
+                  <tr>
+                    <td class="token">0.0.9</td>
+                    <td>beta</td>
+                    <td><span style="color: var(--goldenrod-700)">deprecated</span></td>
+                    <td class="num-col">+4</td>
+                  </tr>
+                  <tr>
+                    <td class="token">0.0.8</td>
+                    <td>internal</td>
+                    <td><span style="color: var(--red-600)">withdrawn</span></td>
+                    <td class="num-col">−2</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <aside class="sidenote">
+            <span class="id">M-09 · resolved 0.1.2</span>
+            Resolved — padding now reads
+            <code>"0.375rem 0.75rem"</code> on all three button variants, matching
+            <code>px-3 py-1.5</code>. Explicit <code>textTransform</code> and
+            <code>letterSpacing</code>
+            bound into the button tokens too.
+          </aside>
+        </section>
+
+        <!-- ============================================================
+         §08 — DENSITY VS SPARSITY
+         ============================================================ -->
+        <section id="density" class="section" data-screen-label="08 Density">
+          <div class="lane">
+            <header class="section-head">
+              <span class="num">§08</span>
+              <span class="rule"></span>
+              <span class="meta">CONTEXT · TWO MODES</span>
+            </header>
+
+            <h2 class="section-title">Sparse for doorways. Dense for workbenches.</h2>
+            <p class="section-lede">
+              The same system, two postures. Sparse when the user needs to orient. Dense when they
+              need to scan, compare, or find. Both correct — if the decision is conscious.
+            </p>
+          </div>
+
+          <div class="compare">
+            <div class="sparse-demo">
+              <div class="ttl-bar">
+                <span>SPARSE · A DOORWAY</span>
+                <span>LANDING · PORTFOLIO · ONBOARDING</span>
+              </div>
+              <h3>Build with intent.</h3>
+              <p>
+                One sentence. One action. The page does nothing else, because nothing else needs
+                doing here.
+              </p>
+              <a href="#" class="btn">Begin <span style="margin-left: 8px">→</span></a>
+            </div>
+            <div class="dense-demo">
+              <div class="ttl-bar">
+                <span>DENSE · A WORKBENCH</span>
+                <span>DASHBOARD · TUI · ADMIN</span>
+              </div>
+              <div class="grid">
+                <div><span class="k">UPTIME</span><span class="v">99.982%</span></div>
+                <div><span class="k">P50</span><span class="v">14ms</span></div>
+                <div><span class="k">P99</span><span class="v">142ms</span></div>
+                <div><span class="k">RPS</span><span class="v up">+8.4k</span></div>
+                <div><span class="k">QUEUE</span><span class="v">3,021</span></div>
+                <div><span class="k">ERR/MIN</span><span class="v dn">+12</span></div>
+                <div><span class="k">CPU</span><span class="v">62%</span></div>
+                <div><span class="k">MEM</span><span class="v">71%</span></div>
+                <div><span class="k">CACHE</span><span class="v">94%</span></div>
+                <div><span class="k">FANOUT</span><span class="v">1:12</span></div>
+              </div>
+              <div class="log">
+                <div class="row">
+                  <span class="t">09:14:32</span><span class="lv ok">OK</span
+                  ><span>worker.A04 reconnected · session resumed</span>
+                </div>
+                <div class="row">
+                  <span class="t">09:14:28</span><span class="lv wn">WARN</span
+                  ><span>queue depth &gt; 3,000 · scaling +2</span>
+                </div>
+                <div class="row">
+                  <span class="t">09:14:21</span><span class="lv ok">OK</span
+                  ><span>migration 014_indexes complete (84 ms)</span>
+                </div>
+                <div class="row">
+                  <span class="t">09:14:14</span><span class="lv er">ERR</span
+                  ><span>token expired for client 91a3 · re-auth</span>
+                </div>
+                <div class="row">
+                  <span class="t">09:14:02</span><span class="lv ok">OK</span
+                  ><span>cache warm · 14,201 keys</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lane" style="padding-top: 32px">
+            <table class="spec">
+              <thead>
+                <tr>
+                  <th>Be sparse when…</th>
+                  <th>Be dense when…</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Landing pages, portfolios, marketing</td>
+                  <td>Dashboards, monitors, telemetry</td>
+                </tr>
+                <tr>
+                  <td>Onboarding flows</td>
+                  <td>Technical documentation, references</td>
+                </tr>
+                <tr>
+                  <td>Single-focus tasks</td>
+                  <td>Admin interfaces, configuration</td>
+                </tr>
+                <tr>
+                  <td>Orientation is the goal</td>
+                  <td>Scan, compare, find is the goal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ============================================================
+         §09 — IN USE — A WORKING SURFACE
+         ============================================================ -->
+        <section id="inuse" class="section" data-screen-label="09 In Use">
+          <div class="lane">
+            <header class="section-head">
+              <span class="num">§09</span>
+              <span class="rule"></span>
+              <span class="meta">SURFACE · DASHBOARD FRAGMENT</span>
+            </header>
+
+            <h2 class="section-title">The system, assembled.</h2>
+            <p class="section-lede">
+              A working surface that uses only the tokens and components defined above. Same
+              vocabulary; nothing new introduced. No shadows. No radii. No animation.
+            </p>
+          </div>
+
+          <div class="ui-demo">
+            <div class="ui-bar">
+              <div class="brand">
+                <span style="font-family: var(--font-mono); color: var(--gray-400)">ARDENT/</span>
+                <strong>console</strong>
+              </div>
+              <div class="crumb">
+                <b>workspace</b><span>/</span><b>orchard</b><span>/</span
+                ><b class="active">deployments</b>
+              </div>
+              <div class="pill live">LIVE</div>
+              <div class="pill">v0.1.1 · 2026.05.20</div>
+            </div>
+
+            <div class="ui-grid">
+              <nav class="ui-side">
+                <div class="group">Workspace</div>
+                <a><span>Overview</span><span class="c">8</span></a>
+                <a class="active"><span>Deployments</span><span class="c">14</span></a>
+                <a><span>Services</span><span class="c">32</span></a>
+                <a><span>Secrets</span><span class="c">21</span></a>
+                <div class="group">Telemetry</div>
+                <a><span>Logs</span><span class="c">live</span></a>
+                <a><span>Traces</span><span class="c">live</span></a>
+                <a><span>Metrics</span><span class="c">6</span></a>
+                <div class="group">Account</div>
+                <a><span>Members</span><span class="c">4</span></a>
+                <a><span>Billing</span><span class="c">—</span></a>
+                <a><span>Settings</span><span class="c">—</span></a>
+              </nav>
+
+              <main class="ui-main">
+                <div class="ui-h">
+                  <h2>Deployments</h2>
+                  <div class="actions">
+                    <button class="btn btn-ghost">Filter</button>
+                    <button class="btn btn-secondary">Configure</button>
+                    <button class="btn">New deploy <span style="margin-left: 6px">→</span></button>
+                  </div>
+                </div>
+
+                <div class="ui-stats">
+                  <div>
+                    <div class="k">SUCCESSFUL · 24H</div>
+                    <div class="v">38<span class="delta">+12</span></div>
+                  </div>
+                  <div>
+                    <div class="k">FAILED · 24H</div>
+                    <div class="v" style="color: var(--red-600)">
+                      2<span class="delta" style="color: var(--red-600)">+1</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="k">AVG DURATION</div>
+                    <div class="v">
+                      1:42<span class="delta" style="color: var(--text-secondary)">−4s</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="k">QUEUE</div>
+                    <div class="v">
+                      3<span class="delta" style="color: var(--text-secondary)">idle</span>
+                    </div>
+                  </div>
+                </div>
+
+                <table class="ui-table">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Service</th>
+                      <th>Branch</th>
+                      <th>Status</th>
+                      <th class="num">Duration</th>
+                      <th class="num">Δ size</th>
+                      <th>Pushed</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>dep_8a14</td>
+                      <td>web-edge</td>
+                      <td>main</td>
+                      <td class="ok">DEPLOYED</td>
+                      <td class="num">1:38</td>
+                      <td class="num">+2.1 kB</td>
+                      <td>2 min ago</td>
+                    </tr>
+                    <tr>
+                      <td>dep_8a13</td>
+                      <td>api-core</td>
+                      <td>main</td>
+                      <td class="ok">DEPLOYED</td>
+                      <td class="num">2:04</td>
+                      <td class="num">−0.8 kB</td>
+                      <td>11 min ago</td>
+                    </tr>
+                    <tr>
+                      <td>dep_8a12</td>
+                      <td>worker-fanout</td>
+                      <td>feat/retry</td>
+                      <td class="wn">RUNNING</td>
+                      <td class="num">0:42</td>
+                      <td class="num">—</td>
+                      <td>14 min ago</td>
+                    </tr>
+                    <tr>
+                      <td>dep_8a11</td>
+                      <td>web-edge</td>
+                      <td>main</td>
+                      <td class="er">FAILED</td>
+                      <td class="num">0:08</td>
+                      <td class="num">—</td>
+                      <td>26 min ago</td>
+                    </tr>
+                    <tr>
+                      <td>dep_8a10</td>
+                      <td>api-core</td>
+                      <td>main</td>
+                      <td class="ok">DEPLOYED</td>
+                      <td class="num">1:51</td>
+                      <td class="num">+0.4 kB</td>
+                      <td>1 h ago</td>
+                    </tr>
+                    <tr>
+                      <td>dep_8a09</td>
+                      <td>scheduler</td>
+                      <td>main</td>
+                      <td class="ok">DEPLOYED</td>
+                      <td class="num">1:12</td>
+                      <td class="num">+1.2 kB</td>
+                      <td>2 h ago</td>
+                    </tr>
+                    <tr>
+                      <td>dep_8a08</td>
+                      <td>worker-fanout</td>
+                      <td>main</td>
+                      <td class="ok">DEPLOYED</td>
+                      <td class="num">2:18</td>
+                      <td class="num">+0.0 kB</td>
+                      <td>4 h ago</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p class="t-caption muted" style="margin-top: 12px">
+                  Showing 7 of 38 · <a href="#" style="color: var(--text-link)">view all →</a>
+                </p>
+              </main>
+            </div>
+          </div>
+
+          <div class="lane" style="padding-top: 32px">
+            <div class="label-row strong"><span class="label">What is reused, where</span></div>
+            <table class="spec">
+              <thead>
+                <tr>
+                  <th>Element</th>
+                  <th>Token</th>
+                  <th>Component</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Status pills</td>
+                  <td>border.muted · emerald.500</td>
+                  <td>Label</td>
+                </tr>
+                <tr>
+                  <td>Sidebar</td>
+                  <td>border.muted · bg.tertiary</td>
+                  <td>Divider · Link</td>
+                </tr>
+                <tr>
+                  <td>Stat tiles</td>
+                  <td>border.muted · spacing.card.padding</td>
+                  <td>Card</td>
+                </tr>
+                <tr>
+                  <td>Table</td>
+                  <td>borderWidth.hairline · gray.50 header</td>
+                  <td>Table</td>
+                </tr>
+                <tr>
+                  <td>Action row</td>
+                  <td>—</td>
+                  <td>Button (3 variants)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ============================================================
+         §M — IMPROVEMENTS / ANNOTATIONS COLLECTED
+         ============================================================ -->
+        <section id="improvements" class="section lane" data-screen-label="M Improvements">
+          <header class="section-head">
+            <span class="num">§M</span>
+            <span class="rule"></span>
+            <span class="meta">ANNOTATIONS · 11 NOTES · ALL RESOLVED · v0.1.3</span>
+          </header>
+
+          <h2 class="section-title">Notes from a junior.</h2>
+          <p class="section-lede">
+            Observations gathered while building this document. All addressed in
+            <code>tokens.json</code> / <code>AGENTS.md</code>
+            across v0.1.2 and v0.1.3. Kept here as a changelog and a record of why the spec looks
+            the way it does.
+          </p>
+
+          <div class="notes-grid">
+            <div class="note resolved">
+              <span class="id">M‑01</span>
+              <div class="text">
+                <strong>Order the tenets.<span class="badge">resolved · 0.1.3</span></strong> Added
+                <code>philosophy.tenetOrder</code> to <code>tokens.json</code> — an explicit,
+                ordered list (<em
+                  >intentionality → transparency → timelessness → precision → functionalDensity →
+                  warmthThroughCraft → performance → respectForUsers</em
+                >). When tenets conflict, apply in order.
+              </div>
+            </div>
+
+            <div class="note resolved">
+              <span class="id">M‑03</span>
+              <div class="text">
+                <strong
+                  >Extend the size scale upward.<span class="badge">resolved · 0.1.2</span></strong
+                >
+                Added <code>fontSize.6xl/7xl/8xl/9xl</code> for cover-grade type, and split
+                <code>display</code> into <code>display</code> + <code>displayLg</code> so it no
+                longer shares the body scale.
+              </div>
+            </div>
+
+            <div class="note resolved">
+              <span class="id">M‑04</span>
+              <div class="text">
+                <strong
+                  >Resolve the amber orphan.<span class="badge">resolved · 0.1.2</span></strong
+                >
+                <code>amber.500</code> removed. If a fifth accent is needed later, it ships as a
+                full scale with a defined role.
+              </div>
+            </div>
+
+            <div class="note resolved">
+              <span class="id">M‑05</span>
+              <div class="text">
+                <strong
+                  >Disambiguate <code>border.default</code> vs <code>border.strong</code>.<span
+                    class="badge"
+                    >resolved · 0.1.3</span
+                  ></strong
+                >
+                All semantic border tokens are now composite — each binds both
+                <code>color</code> and <code>width</code>. <code>border.default</code> = 1px black,
+                <code>border.strong</code> = 2px black, <code>border.muted</code> = 1px gray.200.
+                Consumers pick by name, not by paired tokens.
+              </div>
+            </div>
+
+            <div class="note resolved">
+              <span class="id">M‑06</span>
+              <div class="text">
+                <strong
+                  >Remove spacing duplicates.<span class="badge">resolved · 0.1.2</span></strong
+                >
+                Rewrote the spacing primitives so step number tracks size monotonically.
+                <code>space.4</code> is now <code>1rem</code>, <code>space.7</code> is
+                <code>1.75rem</code>, <code>space.10</code> is <code>2.5rem</code>, etc. No more
+                synonyms.
+              </div>
+            </div>
+
+            <div class="note resolved">
+              <span class="id">M‑07</span>
+              <div class="text">
+                <strong>Delete vestigial radii.<span class="badge">resolved · 0.1.2</span></strong>
+                <code>borderRadius</code> is stripped down to <code>none</code>, in line with the
+                philosophy. Components reference it explicitly. The temptation to reach for a
+                rounded corner now requires editing a primitive.
+              </div>
+            </div>
+
+            <div class="note resolved">
+              <span class="id">M‑08</span>
+              <div class="text">
+                <strong
+                  >Formalize the spec-document container.<span class="badge"
+                    >resolved · 0.1.2</span
+                  ></strong
+                >
+                Added <code>spacing.page.maxWidthDoc</code> (47.5rem / 760&nbsp;px) alongside the
+                reading container so spec sheets and changelogs widen honestly rather than ad hoc.
+              </div>
+            </div>
+
+            <div class="note resolved">
+              <span class="id">M‑09</span>
+              <div class="text">
+                <strong
+                  >Fix the primary-button padding token.<span class="badge"
+                    >resolved · 0.1.2</span
+                  ></strong
+                >
+                Padding now reads <code>"0.375rem 0.75rem"</code> on all three button variants,
+                matching the prose spec <code>px-3 py-1.5</code>. Added explicit
+                <code>textTransform</code> and <code>letterSpacing</code> to the button tokens too.
+              </div>
+            </div>
+
+            <div class="note resolved">
+              <span class="id">M‑10</span>
+              <div class="text">
+                <strong
+                  >Add motion &amp; focus tokens, even if zero.<span class="badge"
+                    >resolved · 0.1.2</span
+                  ></strong
+                >
+                <code>motion.duration.* = 0ms</code> and <code>motion.easing.* = linear</code> are
+                canonical. "No animation" is a token value, not an implication.
+                <code>primitives.focus</code> adds a shared focus ring (2px black, offset 0.125rem).
+              </div>
+            </div>
+
+            <div class="note resolved">
+              <span class="id">M‑11</span>
+              <div class="text">
+                <strong
+                  >Add a TUI / GUI surface note.<span class="badge">resolved · 0.1.3</span></strong
+                >
+                New top-level <code>surfaces</code> block in <code>tokens.json</code> describes how
+                the vocabulary lands on each: TUI maps accents to ANSI 1/2/3/4 and hairlines to
+                box-drawing glyphs (<code>─ │ ┌ ┐ └ ┘</code>); GUI uses the same hex values with
+                platform-native rendering and no rounded corners.
+              </div>
+            </div>
+
+            <div class="note resolved">
+              <span class="id">M‑12</span>
+              <div class="text">
+                <strong
+                  >Promote the AI directives to a separate file.<span class="badge"
+                    >resolved · 0.1.3</span
+                  ></strong
+                >
+                Extracted to <code><a href="AGENTS.md">AGENTS.md</a></code> at the project root. The
+                philosophy doc references it; this presentation links it from the colophon below.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================================
+         BOTTOM META BAR  /  COLOPHON
+         ============================================================ -->
+        <footer>
+          <div class="colophon">
+            <div class="grid">
+              <div>
+                <h4>About this document</h4>
+                <p>
+                  Single-page documentation site for Ardent Design v0.1.1. Built as an Ardent
+                  artifact — the system applied to itself.
+                </p>
+              </div>
+              <div>
+                <h4>Source files</h4>
+                <ul>
+                  <li>
+                    ·
+                    <a
+                      href="source/ARDENT_DESIGN.md"
+                      style="color: var(--text-link); text-decoration: underline"
+                      >ARDENT_DESIGN.md</a
+                    >
+                  </li>
+                  <li>
+                    ·
+                    <a
+                      href="source/tokens.json"
+                      style="color: var(--text-link); text-decoration: underline"
+                      >tokens.json</a
+                    >
+                    · v0.1.3
+                  </li>
+                  <li>
+                    ·
+                    <a href="AGENTS.md" style="color: var(--text-link); text-decoration: underline"
+                      >AGENTS.md</a
+                    >
+                  </li>
+                  <li>
+                    ·
+                    <a href="styles.css" style="color: var(--text-link); text-decoration: underline"
+                      >styles.css</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4>Closing</h4>
+                <p>Simple complexity. Ridding the spaces between aesthetics and function.</p>
+              </div>
+            </div>
+          </div>
+
+          <dl class="meta-bar bottom">
+            <div>
+              <dt>END</dt>
+              <dd>OF DOCUMENT</dd>
+            </div>
+            <div>
+              <dt>SECTIONS</dt>
+              <dd>10 · M×11</dd>
+            </div>
+            <div>
+              <dt>SET</dt>
+              <dd>INTER · OST · IBM PLEX MONO</dd>
+            </div>
+            <div>
+              <dt>©</dt>
+              <dd style="">D. Padma · 2026 · v0.1.3</dd>
+            </div>
+          </dl>
+        </footer>
+      </article>
+    </div>
+  </body>
+</html>

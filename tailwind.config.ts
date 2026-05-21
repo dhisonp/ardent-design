@@ -42,9 +42,6 @@ const config: Config = {
           800: "#7F1D1D",
           900: "#450A0A",
         },
-        amber: {
-          500: "#FF9600",
-        },
         goldenrod: {
           50: "#FFFAEB",
           100: "#FFF0C2",
@@ -72,8 +69,22 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", "Inter", "Helvetica Neue", "Arial", "sans-serif"],
-        serif: ["var(--font-serif)", "Old Standard TT", "serif"],
-        mono: ["var(--font-mono)", "IBM Plex Mono", "Consolas", "monospace"],
+        serif: [
+          "var(--font-serif)",
+          "Old Standard TT",
+          "Source Serif",
+          "Domine",
+          "Times New Roman",
+          "serif",
+        ],
+        mono: [
+          "var(--font-mono)",
+          "IBM Plex Mono",
+          "Geist Mono",
+          "Fira Code",
+          "Berkeley Mono",
+          "monospace",
+        ],
       },
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1.35" }],
@@ -89,15 +100,6 @@ const config: Config = {
         tight: "-0.025em",
         wide: "0.05em",
         wider: "0.1em",
-      },
-      spacing: {
-        // Overriding default spacing for "tightness"
-        "4": "0.875rem", // 14px (was 16px)
-        "5": "1rem", // 16px (was 20px)
-        "6": "1.25rem", // 20px (was 24px)
-        "8": "1.75rem", // 28px (was 32px)
-        "12": "2.5rem", // 40px (was 48px)
-        "16": "3.5rem", // 56px (was 64px)
       },
       borderWidth: {
         hairline: "1px",
